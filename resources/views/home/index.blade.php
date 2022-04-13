@@ -5,7 +5,7 @@
 
 @section('content')
 
-    {{--I may change the location--}}
+    {{--I may change the location or crete special blade for the slider--}}
     @section('home.slidebar')
         @include("home.slidebar")
     @show
