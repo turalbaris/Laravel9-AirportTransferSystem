@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\CategoryController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -53,6 +54,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //*********************************** ADMIN PANEL   ROUTES *************************************//
 
 Route::get( uri: '/admin',action: [AdminHomeController::class,'index'])->name('admin');
+
+
+//*********************************** ADMIN CATEGORY   ROUTES *************************************//
+Route::get( uri: '/admin/category',action: [CategoryController::class,'index'])->name('admin_category');
+Route::get( uri: '/admin/category/create',action: [CategoryController::class,'create'])->name('admin_category_create');
 
 
 
