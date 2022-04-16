@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        echo "Category list test";
+        return view('admin.category.index');
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        echo "Category create test";
+        return view('admin.category.create');
     }
 
     /**
@@ -39,6 +39,13 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         //
+        $data = new Category();
+        $data->parent_id = 0;
+        $data->title = $request->title;
+        $data->keywords = $request->keywords;
+        $data->description = $request->description;
+        $data->status = $request->status;
+        $data->save();
     }
 
     /**
