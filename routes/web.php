@@ -60,6 +60,9 @@ Route::get( uri: '/admin',action: [AdminHomeController::class,'index'])->name('a
 Route::get( uri: '/admin/category',action: [CategoryController::class,'index'])->name('admin_category');
 Route::get( uri: '/admin/category/create',action: [CategoryController::class,'create'])->name('admin_category_create');
 Route::post( uri: '/admin/category/store',action: [CategoryController::class,'store'])->name('admin_category_store');
+Route::get( uri: '/admin/category/edit/{id}',action: [CategoryController::class,'edit'])->name('admin_category_edit');
+Route::post( uri: '/admin/category/update/{id}',action: [CategoryController::class,'update'])->name('admin_category_update');
+
 
 
 

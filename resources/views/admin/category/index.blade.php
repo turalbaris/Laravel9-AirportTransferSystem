@@ -43,9 +43,9 @@
                                                 <td>{{$rs->description}}</td>
                                                 <td>{{$rs->image}}</td>
                                                 <td>{{$rs->status}}</td>
-                                                <td><a href="/admin/category/edit{{$rs->id}}" class="btn btn-primary">Edit </a></td>
-                                                <td><a href="/admin/category/delete{{$rs->id}}" class="btn btn-danger">Delete</a></td>
-                                                <td><a href="/admin/category/show{{$rs->id}}" class="btn btn-success">Show</a></td>
+                                                <td><a href="/admin/category/edit/{{$rs->id}}" class="btn btn-primary">Edit </a></td>
+                                                <td><a href="/admin/category/delete/{{$rs->id}}" class="btn btn-danger">Delete</a></td>
+                                                <td><a href="/admin/category/show/{{$rs->id}}" class="btn btn-success">Show</a></td>
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -55,24 +55,24 @@
                         </div>
 
                     </div>
-                    </div>
+                </div>
                 <!-- End  Kitchen Sink -->
 
-                </div>
             </div>
-            <!-- /. ROW  -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="alert alert-info">
-                        This is a free responsive admin under cc3.0 license, so you can use it for personal and commercial use.
-                        <br />
-                        Enjoy this admin and for more please keep looking <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <!-- /. PAGE INNER  -->
+        <!-- /. ROW  -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-info">
+                    This is a free responsive admin under cc3.0 license, so you can use it for personal and commercial use.
+                    <br />
+                    Enjoy this admin and for more please keep looking <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /. PAGE INNER  -->
     </div>
     <!-- /. PAGE WRAPPER  -->
 
