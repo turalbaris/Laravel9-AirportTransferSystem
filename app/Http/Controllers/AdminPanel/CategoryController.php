@@ -15,8 +15,14 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.category.index');
+        //We accessed the controller
+        //Controller accessed the model and get data from the model
+        //And we send these data to index area
+        //we defined the foreach loop that lists all the data in the table.
+        $data= Category::all();
+        return view('admin.category.index',[
+            'data' => $data
+        ]);
     }
 
     /**
@@ -46,6 +52,7 @@ class CategoryController extends Controller
         $data->description = $request->description;
         $data->status = $request->status;
         $data->save();
+        return redirect('admin/category');
     }
 
     /**
