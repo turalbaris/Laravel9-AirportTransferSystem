@@ -9,7 +9,11 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="page-head-line">Category List</h1>
+                    <div class="col-md-12">
+                        <hr>
+                        <a href="/admin/category/create" class="btn btn-lg btn-primary">Add Category</a>
+                        <hr>
+                    </div>
 
                     <!--   Kitchen Sink -->
                     <!--    md-6 changed to md-12 to cover all of the div-->
@@ -20,7 +24,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover">
+                                    <table class="table table-striped table-bordered table-hover" >
                                         <thead>
                                         <tr>
                                             <th>Id</th>
@@ -61,15 +65,6 @@
             </div>
         </div>
         <!-- /. ROW  -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="alert alert-info">
-                    This is a free responsive admin under cc3.0 license, so you can use it for personal and commercial use.
-                    <br />
-                    Enjoy this admin and for more please keep looking <a href="http://www.binarytheme.com/" target="_blank">BinaryTheme.com</a>
-                </div>
-            </div>
-        </div>
 
     </div>
     <!-- /. PAGE INNER  -->
