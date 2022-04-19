@@ -62,6 +62,8 @@ Route::get( uri: '/admin/category/create',action: [CategoryController::class,'cr
 Route::post( uri: '/admin/category/store',action: [CategoryController::class,'store'])->name('admin_category_store');
 Route::get( uri: '/admin/category/edit/{id}',action: [CategoryController::class,'edit'])->name('admin_category_edit');
 Route::post( uri: '/admin/category/update/{id}',action: [CategoryController::class,'update'])->name('admin_category_update');
+Route::get( uri: '/admin/category/delete/{id}',action: [CategoryController::class,'destroy'])->name('admin_category_destroy');
+Route::get( uri: '/admin/category/show/{id}',action: [CategoryController::class,'show'])->name('admin_category_show');
 
 
 

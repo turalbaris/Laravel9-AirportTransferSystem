@@ -6,9 +6,9 @@
                     <img src="{{asset('assets')}}/admin//img/user.png" class="img-thumbnail" />
 
                     <div class="inner-text">
-                        Jhon Deo Alex
+                        Baris Tural
                         <br />
-                        <small>Last Login : 2 Weeks Ago </small>
+                        <small>Last Login : 2 Minutes Ago </small>
                     </div>
                 </div>
 
