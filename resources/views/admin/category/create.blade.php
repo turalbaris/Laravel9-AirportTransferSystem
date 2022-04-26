@@ -21,7 +21,7 @@
 
 {{--                                maybe store ???  try later   --}}
 
-                                <form role="form" action="{{route('admin.category.store')}}" method="post">
+                                <form role="form" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label>Title</label>
@@ -41,7 +41,7 @@
                                     <div class="form-group">
                                         <label>Image</label>
                                         <input class="form-control" type="file" name="image">
-                                        <p class="help-block">Choose image file. (Doesn't work for now.)</p>
+                                        <p class="help-block">Choose image file.</p>
                                     </div>
                                     <div class="form-group">
                                         <label>Status</label>
