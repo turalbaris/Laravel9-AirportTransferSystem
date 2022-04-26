@@ -12,10 +12,10 @@
                     <div class="col-md-12">
                         <hr>
                         <div class="col-md-2">
-                            <a href="/admin/category/edit/{{$data->id}}" class="btn btn-lg btn-success">Edit Category</a>
+                            <a href="{{route('admin.category.edit',['id'=>$data->id])}}" class="btn btn-lg btn-success">Edit Category</a>
                         </div>
                         <div>
-                            <a href="/admin/category/delete/{{$data->id}}" onclick="return confirm('Deleting !! Are you sure ?')" class="btn btn-lg btn-danger">Delete Category</a>
+                            <a href="{{route('admin.category.destroy',['id'=>$data->id])}}" onclick="return confirm('Deleting !! Are you sure ?')" class="btn btn-lg btn-danger">Delete Category</a>
                         </div>
                         <hr>
                     </div>
@@ -59,7 +59,7 @@
                                         </tr>
                                     </table>
                                     <div class="col-md-2">
-                                        <a href="/admin/category/" class="btn btn-lg btn-danger">Go Back</a>
+                                        <a href="{{route('admin.category.index')}}" class="btn btn-lg btn-danger">Go Back</a>
                                     </div>
                                 </div>
                             </div>

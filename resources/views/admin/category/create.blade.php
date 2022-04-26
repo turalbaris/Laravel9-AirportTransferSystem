@@ -18,7 +18,10 @@
                                 <h4>Add Category</h4>
                             </div>
                             <div class="panel-body">
-                                <form role="form" action="/admin/category/store" method="post">
+
+{{--                                maybe store ???  try later   --}}
+
+                                <form role="form" action="{{route('admin.category.store')}}" method="post">
                                     @csrf
                                     <div class="form-group">
                                         <label>Title</label>
