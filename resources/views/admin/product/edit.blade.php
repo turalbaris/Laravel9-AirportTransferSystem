@@ -22,8 +22,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label>Parent Category</label>
-                                        <select class="form-control select2" name="parent_id">
-                                            <option value="0" selected="selected">Main Product</option>
+                                        <select class="form-control select2" name="category_id">
                                             @foreach($datalist as $rs)
                                                 <option value="{{$rs->id}}" @if ($rs->id == $data->category_id) selected="selected" @endif >
                                                     {{\App\Http\Controllers\AdminPanel\AdminProductController::getParentsTree($rs, $rs->title)}}</option>
