@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\AdminProductController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\HomeController;
@@ -28,17 +29,28 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 //*********************************** ADMIN PANEL   ROUTES *************************************//
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get( uri: '',action: [AdminHomeController::class,'index'])->name('index');
+    Route::get('/',[AdminHomeController::class,'index'])->name('index');
 //*********************************** ADMIN CATEGORY   ROUTES *************************************//
-    Route::prefix('category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
-        Route::get( uri: '',action: [AdminCategoryController::class,'index'])->name('index');
-        Route::get( uri: '/create',action: [AdminCategoryController::class,'create'])->name('create');
-        Route::post( uri: '/store',action: [AdminCategoryController::class,'store'])->name('store');
-        Route::get( uri: '/edit/{id}',action: [AdminCategoryController::class,'edit'])->name('edit');
-        Route::post( uri: '/update/{id}',action: [AdminCategoryController::class,'update'])->name('update');
-        Route::get( uri: '/delete/{id}',action: [AdminCategoryController::class,'destroy'])->name('destroy');
-        Route::get( uri: '/show/{id}',action: [AdminCategoryController::class,'show'])->name('show');
+    Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/delete/{id}','destroy')->name('destroy');
+        Route::get('/show/{id}','show')->name('show');
     });
+    //*********************************** ADMIN PRODUCT   ROUTES *************************************//
+    Route::prefix('/product')->name('product.')->controller(AdminProductController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/delete/{id}','destroy')->name('destroy');
+        Route::get('/show/{id}','show')->name('show');
+    });
+
 });
 
 

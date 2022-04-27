@@ -42,7 +42,7 @@
                 <a href="/admin/category"><i class="glyphicon glyphicon-list"></i>Categories</a>
             </li>
             <li>
-                <a href="/admin/transfer"><i class="glyphicon glyphicon-transfer"></i>Transfer</a>
+                <a href="/admin/product"><i class="glyphicon glyphicon-transfer"></i>Transfer(Product)</a>
             </li>
             <li>
                 <a href="/admin/comment"><i class="glyphicon glyphicon-comment"></i>Comments</a>

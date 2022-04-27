@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'Edit Category: '.$data->title)
+@section('title', 'Edit Product: '.$data->title)
 
 @section('content')
 
@@ -9,24 +9,24 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="page-head-line">Edit Category: {{$data->title}}</h1>
+                    <h1 class="page-head-line">Edit Product: {{$data->title}}</h1>
 
                     <!-- /. Form Starts -->
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                <h4>Category Elements</h4>
+                                <h4>Product Elements</h4>
                             </div>
                             <div class="panel-body">
-                                <form role="form" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
+                                <form role="form" action="{{route('admin.product.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label>Parent Category</label>
                                         <select class="form-control select2" name="parent_id">
-                                            <option value="0" selected="selected">Main Category</option>
+                                            <option value="0" selected="selected">Main Product</option>
                                             @foreach($datalist as $rs)
-                                                <option value="{{$rs->id}}" @if ($rs->id == $data->parent_id) selected="selected" @endif >
-                                                        {{\App\Http\Controllers\AdminPanel\AdminProductController::getParentsTree($rs, $rs->title)}}</option>
+                                                <option value="{{$rs->id}}" @if ($rs->id == $data->category_id) selected="selected" @endif >
+                                                    {{\App\Http\Controllers\AdminPanel\AdminProductController::getParentsTree($rs, $rs->title)}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -42,12 +42,38 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <input class="form-control" type="text" name="description" value="{{$data->description}}">
+                                        <input class="form-control" type="text" name="description" value="{{$data->description}} ">
                                         <p class="help-block">Enter the description.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Detail</label>
+                                        <textarea class="form-control" name="detail">{{$data->detail}}</textarea>
+                                        <p class="help-block">Enter the detail.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Base Price</label>
+                                        <input class="form-control" type="number" name="base_price" value="{{$data->base_price}}" min="5">
+                                        <p class="help-block">Enter the base price.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>KM Price</label>
+                                        <input class="form-control" type="number" name="km_price" value="{{$data->km_price}}" min="1" step="0.01">
+                                        <p class="help-block">Enter the km price.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Capacity</label>
+                                        <input class="form-control" type="number" name="capacity" value="{{$data->capacity}}" min="1">
+                                        <p class="help-block">Enter the capacity. (Min = 1)</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tax %</label>
+                                        <input class="form-control" type="number" name="tax" value="{{$data->tax}}" min="1">
+                                        <p class="help-block">Enter the tax percentage. (Exp.: Tax = 18)</p>
                                     </div>
                                     <div class="form-group">
                                         <label>Image</label>
                                         <input class="form-control" type="file" name="image" >
+                                        <img src="/storage/{{$data->image}}" width="80px">
                                         <p class="help-block">Choose image file.</p>
                                     </div>
                                     <div class="form-group">
