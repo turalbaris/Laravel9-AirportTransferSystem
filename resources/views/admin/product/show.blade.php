@@ -35,7 +35,8 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 150px">Category  Id</th>
-                                            <th>{{$data->category_id}}</th>
+                                            {{--I have category function(belongs to ) in the product(model). With this I can get the title of my category--}}
+                                            <th>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data->category, $data->category->title)}}</th>
                                         </tr>
                                         <tr>
                                             <th style="width: 150px">Title</th>

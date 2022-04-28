@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Title</label>
-                                        <input class="form-control" type="text" name="title">
+                                        <input class="form-control" type="text" name="title" required="required">
                                         <p class="help-block">Enter the title.</p>
                                     </div>
                                     <div class="form-group">

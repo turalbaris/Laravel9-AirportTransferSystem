@@ -20,7 +20,7 @@ class CategoryController extends Controller
         }
         $parent = Category::find($category->parent_id);
         $title = $parent->title . ' > ' . $title;
-        return AdminProductController::getParentsTree($parent, $title);
+        return CategoryController::getParentsTree($parent, $title);
     }
 
 
@@ -147,7 +147,6 @@ class CategoryController extends Controller
         if($data->image){
             Storage::delete($data->image);
         }
-
         $data->delete();
         return redirect('admin/category');
     }
