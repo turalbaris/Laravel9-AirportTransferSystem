@@ -3,7 +3,7 @@
         <ul class="nav" id="main-menu">
             <li>
                 <div class="user-img-div">
-                    <img src="{{asset('assets')}}/admin//img/user.png" class="img-thumbnail" />
+                    <img src="{{asset('assets')}}/admin/img/user.png" class="img-thumbnail" />
 
                     <div class="inner-text">
                         Baris Tural
