@@ -45,44 +45,44 @@
                     </div>
                 </div>
                 <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                    <h4 class="text-secondary mb-3">Going for a vacation?</h4>
-                    <h1 class="display-4 mb-4">Book For <span class="text-primary">Your Pet</span></h1>
-                    <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
+                    <h4 class="text-secondary mb-3">Looking for an Airport Transfer?</h4>
+                    <h1 class="display-4 mb-4">Book Your<span class="text-primary"> Transfer</span></h1>
+                    <p>Enjoy a speedy, safe and reliable airport transfer direct to your destination.</p>
                     <div class="row py-2">
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1 class="flaticon-house font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Boarding</h5>
+                                    <img src="{{asset('assets')}}/img/destination.png" style="width: 50px;padding-right: 15px"></img>
+                                    <h5 class="text-truncate m-0">On-Time</h5>
                                 </div>
-                                <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p>On-Time Pickup and Drop Off Exclusive Wait Time.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1 class="flaticon-food font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Feeding</h5>
+                                    <img src="{{asset('assets')}}/img/like.png" style="width: 50px;padding-right: 15px">
+                                    <h5 class="text-truncate m-0">Professional Drivers</h5>
                                 </div>
-                                <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p> Licensed, Insured and Regulated Drivers.</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1 class="flaticon-grooming font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Grooming</h5>
+                                    <img src="{{asset('assets')}}/img/option.png" style="width: 50px;padding-right: 15px">
+                                    <h5 class="text-truncate m-0">Secured Payment</h5>
                                 </div>
-                                <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p class="m-0">No Hidden Charges Affordable All-Inclusive Rate</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex flex-column">
                                 <div class="d-flex align-items-center mb-2">
-                                    <h1 class="flaticon-toy font-weight-normal text-secondary m-0 mr-3"></h1>
-                                    <h5 class="text-truncate m-0">Pet Tranning</h5>
+                                    <img src="{{asset('assets')}}/img/support.png" style="width: 50px;padding-right: 15px">
+                                    <h5 class="text-truncate m-0">7/24 Support</h5>
                                 </div>
-                                <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                                <p class="m-0">Round the Clock Help Solution to All Problems</p>
                             </div>
                         </div>
                     </div>
@@ -98,12 +98,13 @@
         <div class="row py-5">
             <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
                 <h4 class="text-secondary mb-3">About Us</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Boarding</span> & <span class="text-secondary">Daycare</span></h1>
-                <h5 class="text-muted mb-3">Amet stet amet ut. Sit no vero vero no dolor. Sed erat ut sea. Just clita ut stet kasd at diam sit erat vero sit.</h5>
-                <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                <h1 class="display-4 mb-4"><span class="text-primary">Safe</span> & <span class="text-secondary">Competitive </span></h1>
+                <h5 class="text-muted mb-3">AirTra offers professional car and limo transport service with our complete fleet of modern vehicles for all your business and personal transport needs.
+                </h5>
+                <p class="mb-4">Our commitment to providing high class, safe, and professional transport service at competitive prices to our customers has been crucial to our ongoing success.</p>
                 <ul class="list-inline">
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Best In Industry</h5></li>
-                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Emergency Services</h5></li>
+                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Worldwide Coverage</h5></li>
+                    <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Latest Model Vehicles</h5></li>
                     <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>24/7 Customer Support</h5></li>
                 </ul>
                 <a href="" class="btn btn-lg btn-primary mt-3 px-4">Learn More</a>
@@ -111,13 +112,13 @@
             <div class="col-lg-5">
                 <div class="row px-3">
                     <div class="col-12 p-0">
-                        <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/about-1.jpg" alt="">
+                        <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/safety-belt-car-2.png" alt="">
                     </div>
                     <div class="col-6 p-0">
-                        <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/about-2.jpg" alt="">
+                        <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/safety-belt-car.png" alt="">
                     </div>
                     <div class="col-6 p-0">
-                        <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/about-3.jpg" alt="">
+                        <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/safety-belt-car-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -130,54 +131,65 @@
         <div class="container py-5">
             <div class="d-flex flex-column text-center mb-5">
                 <h4 class="text-secondary mb-3">Our Services</h4>
-                <h1 class="display-4 m-0"><span class="text-primary">Premium</span> Pet Services</h1>
+                <h1 class="display-4 m-0"><span class="text-primary">Premium</span> Transfer Services</h1>
             </div>
             <div class="row pb-3">
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
-                        <h3 class="flaticon-house display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Boarding</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                        <div>
+                            <img src="{{asset('assets')}}/img/shield.gif" style="width: 75px">
+                        </div>
+                        <h3 class="mb-3">Safe Rides</h3>
+                        <p>We'll make your safety our number one priority. Our experienced drivers will ensure you get to your destination safely and on time.</p>
                         <a class="text-uppercase font-weight-bold" href="">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
-                        <h3 class="flaticon-food display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Feeding</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                        <div>
+                            <img src="{{asset('assets')}}/img/stopwatch.gif" style="width: 75px">
+                        </div>
+                        <h3 class="mb-3">On-Time Arrival</h3>
+                        <p>When you are traveling to a busy airport like IST or JFK, you need your airport shuttle to value punctuality as much as you do.</p>
                         <a class="text-uppercase font-weight-bold" href="">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
-                        <h3 class="flaticon-grooming display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Grooming</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                        <div>
+                            <img src="{{asset('assets')}}/img/payment.gif" style="width: 75px">
+                        </div>
+                         <h3 class="mb-3">Free Cancellation</h3>
+                        <p>Your plans can be changed without any penalty! Simply contact us to cancel your reservation up until 24 hours before you would like it.</p>
                         <a class="text-uppercase font-weight-bold" href="">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
-                        <h3 class="flaticon-cat display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Per Training</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                        <div>
+                            <img src="{{asset('assets')}}/img/click.gif" style="width: 75px">
+                        </div>
+                        <h3 class="mb-3">Easy Booking</h3>
+                        <p>Our Online Portal helps you to manage your transfers with few easy clicks. Book your easy Airport transfer now and let us handle the rest for you.</p>
                         <a class="text-uppercase font-weight-bold" href="">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
-                        <h3 class="flaticon-dog display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Exercise</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                        <div>
+                            <img src="{{asset('assets')}}/img/car.gif" style="width: 75px">
+                        </div>
+                        <h3 class="mb-3">Vehicle Variety</h3>
+                        <p>Our diverse range of cars is now ready to cater to your needs. Choose from a range of available fleet and leave the rest to us.</p>
                         <a class="text-uppercase font-weight-bold" href="">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5">
-                        <h3 class="flaticon-vaccine display-3 font-weight-normal text-secondary mb-3"></h3>
-                        <h3 class="mb-3">Pet Treatment</h3>
-                        <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet, diam sea est magna diam eos, rebum sit vero stet ipsum justo</p>
+                    <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-5"><div>
+                            <img src="{{asset('assets')}}/img/24-hours.gif" style="width: 75px">
+                        </div>
+                        <h3 class="mb-3">7/24 Support</h3>
+                        <p>We are at your service with our 24/7 e-mail and call support line dedicated to any questions you may have during your airport transfers and stay.</p>
                         <a class="text-uppercase font-weight-bold" href="">Read More</a>
                     </div>
                 </div>
@@ -190,34 +202,34 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
-                <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/feature.jpg" alt="">
+                <img class="{{asset('assets')}}/img-fluid w-100" src="{{asset('assets')}}/img/feature3.jpg" alt="">
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
                 <h4 class="text-secondary mb-3">Why Choose Us?</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Special Care</span> On Pets</h1>
-                <p class="mb-4">Dolor lorem lorem ipsum sit et ipsum. Sadip sea amet diam sed ut vero no sit. Et elitr stet sed sit sed kasd. Erat duo eos et erat sed diam duo</p>
+                <h1 class="display-4 mb-4"><span class="text-primary">Special Transfer for</span> Our Customers</h1>
+                <p class="mb-4">Experience the best luxury service for all occasions and travel needs.</p>
                 <div class="row py-2">
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
-                            <h1 class="flaticon-cat font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Best In Industry</h5>
+                            <img src="{{asset('assets')}}/img/stable.gif" style="width: 50px;padding-right: 15px">
+                            <h5 class="text-truncate m-0">All-Inclusive Rates</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
-                            <h1 class="flaticon-doctor font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Emergency Services</h5>
+                            <img src="{{asset('assets')}}/img/car.gif" style="width: 50px;padding-right: 15px">
+                            <h5 class="text-truncate m-0">Clean Cars</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
-                            <h1 class="flaticon-care font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Special Care</h5>
+                            <img src="{{asset('assets')}}/img/clock.gif" style="width: 50px;padding-right: 15px">
+                            <h5 class="text-truncate m-0">Free Cancellation</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
-                            <h1 class="flaticon-dog font-weight-normal text-secondary m-0 mr-3"></h1>
+                            <img src="{{asset('assets')}}/img/support.gif" style="width: 50px;padding-right: 15px">
                             <h5 class="text-truncate m-0">Customer Support</h5>
                         </div>
                     </div>
@@ -226,170 +238,6 @@
         </div>
     </div>
     <!-- Features End -->
-
-    <!-- Pricing Plan Start -->
-    <div class="container-fluid bg-light pt-5 pb-4">
-        <div class="container py-5">
-            <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Pricing Plan</h4>
-                <h1 class="display-4 m-0">Choose the <span class="text-primary">Best Price</span></h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="{{asset('assets')}}/img/price-1.jpg" alt="">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-primary mb-3">Basic</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Veterinary Medicine</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="{{asset('assets')}}/img/price-2.jpg" alt="">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-secondary mb-3">Standard</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Veterinary Medicine</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Signup Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card border-0">
-                        <div class="card-header position-relative border-0 p-0 mb-4">
-                            <img class="card-img-top" src="{{asset('assets')}}/img/price-3.jpg" alt="">
-                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-primary mb-3">Premium</h3>
-                                <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="card-body text-center p-0">
-                            <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Veterinary Medicine</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pricing Plan End -->
-
-    <!-- Team Start -->
-    <div class="container mt-5 pt-5 pb-3">
-        <div class="d-flex flex-column text-center mb-5">
-            <h4 class="text-secondary mb-3">Team Member</h4>
-            <h1 class="display-4 m-0">Meet Our <span class="text-primary">Team Member</span></h1>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="{{asset('assets')}}/img/team-1.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Mollie Ross</h5>
-                            <i>Founder & CEO</i>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="{{asset('assets')}}/img/team-2.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Jennifer Page</h5>
-                            <i>Chef Executive</i>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="{{asset('assets')}}/img/team-3.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Kate Glover</h5>
-                            <i>Doctor</i>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="team card position-relative overflow-hidden border-0 mb-4">
-                    <img class="card-img-top" src="{{asset('assets')}}/img/team-4.jpg" alt="">
-                    <div class="card-body text-center p-0">
-                        <div class="team-text d-flex flex-column justify-content-center bg-light">
-                            <h5>Lilly Fry</h5>
-                            <i>Trainer</i>
-                        </div>
-                        <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary rounded-circle text-center px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid bg-light my-5 p-0 py-5">
@@ -403,41 +251,62 @@
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
                         <img class="{{asset('assets')}}/img-fluid" src="{{asset('assets')}}/img/testimonial-1.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Logan Paul</h5>
+                            <i>Youtuber</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">I'm big lover of the AirTra service! The drivers are always well-mannered and professional and feel safe and comfortable in their care. The prices are very reasonable, as compared to other chauffeur services.</p>
+                </div>
+                <div class="bg-white mx-3 p-4">
+                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
+                        <img class="{{asset('assets')}}/img-fluid" src="{{asset('assets')}}/img/testimonial-5.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="ml-3">
+                            <h5>Charlotte Lawrence</h5>
+                            <i>Mechanical Engineer</i>
+                        </div>
+                    </div>
+                    <p class="m-0">I used there car service and was happy with the experience. The drivers were professional and polite. The cars were immaculate and comfortable, and the pricing was very reasonable for this luxury service.</p>
                 </div>
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
                         <img class="{{asset('assets')}}/img-fluid" src="{{asset('assets')}}/img/testimonial-2.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Ronaldo Mccormack</h5>
+                            <i>CEO</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">Everything was excellent communication was good and our driver was understanding about our delayed flight. The website was also easy to use and all interactions have been friendly. Thanks for taking care of us.</p>
                 </div>
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
                         <img class="{{asset('assets')}}/img-fluid" src="{{asset('assets')}}/img/testimonial-3.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Nancy Drew</h5>
+                            <i>CTO</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">For me one of the most important things is respect and this company incarnate it through these drivers. By the way its comfortable, I recommend you this company.</p>
                 </div>
                 <div class="bg-white mx-3 p-4">
                     <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
                         <img class="{{asset('assets')}}/img-fluid" src="{{asset('assets')}}/img/testimonial-4.jpg" style="width: 80px; height: 80px;" alt="">
                         <div class="ml-3">
-                            <h5>Client Name</h5>
-                            <i>Profession</i>
+                            <h5>Tony North</h5>
+                            <i>Lawyer</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">I think this company is very effective. They don't take time for pick up the customer. The drop off was also on time.</p>
+                </div>
+
+                <div class="bg-white mx-3 p-4">
+                    <div class="d-flex align-items-end mb-3 mt-n4 ml-n4">
+                        <img class="{{asset('assets')}}/img-fluid" src="{{asset('assets')}}/img/testimonial-6.jpg" style="width: 80px; height: 80px;" alt="">
+                        <div class="ml-3">
+                            <h5>Dominic Benjamin</h5>
+                            <i>Doctor</i>
+                        </div>
+                    </div>
+                    <p class="m-0">Let me stay off by saying, if you are looking for a reliable company with prompt airport pickup service use them! Request my driver Jonathan Gutierrez, he met us right in front escorted us to his clean car, even had cold water and hand wipes ready for us! He gave us a personalized tour as we drove of the different sites we should visit and things to do. Not your typical driver. Next time we come we will request him for sure!</p>
                 </div>
             </div>
         </div>
