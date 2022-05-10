@@ -2,6 +2,17 @@
 
 @section('title', 'Edit Product: '.$data->title)
 
+@section('head')
+    <!-- include libraries(jQuery, bootstrap) //// Summernote -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js //// Summernote -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+@endsection
+
 @section('content')
 
     <!-- /. PAGE WRAPPER  -->
@@ -46,7 +57,25 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Detail</label>
-                                        <textarea class="form-control" name="detail">{{$data->detail}}</textarea>
+                                        <textarea  class="form-control" id="detail" name="detail">
+                                            {{$data->detail}}
+                                        </textarea>
+                                        <script>
+                                            $('#detail').summernote({
+                                                placeholder: 'Hello stand alone ui',
+                                                tabsize: 2,
+                                                height: 120,
+                                                toolbar: [
+                                                    ['style', ['style']],
+                                                    ['font', ['bold', 'underline', 'clear']],
+                                                    ['color', ['color']],
+                                                    ['para', ['ul', 'ol', 'paragraph']],
+                                                    ['table', ['table']],
+                                                    ['insert', ['link', 'picture', 'video']],
+                                                    ['view', ['fullscreen', 'codeview', 'help']]
+                                                ]
+                                            });
+                                        </script>
                                         <p class="help-block">Enter the detail.</p>
                                     </div>
                                     <div class="form-group">

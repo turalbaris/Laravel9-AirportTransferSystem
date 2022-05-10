@@ -51,7 +51,8 @@
     <div class="row">
         <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
             <p class="m-0 text-white">
-                &copy; <a class="text-white font-weight-bold" href="#">AirTra</a>. All Rights Reserved.
+                &copy; <a class="text-white font-weight-bold" href="#">AirTra</a>. All Rights Reserved. Designed by
+                <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
             </p>
         </div>
         <div class="col-md-6 text-center text-md-right">

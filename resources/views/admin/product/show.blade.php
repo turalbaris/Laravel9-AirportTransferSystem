@@ -52,7 +52,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width: 150px">Detail</th>
-                                            <th>{{$data->detail}}</th>
+                                            <th>{!! $data->detail !!}</th>
                                         </tr>
                                         <tr>
                                             <th style="width: 150px">Base Price</th>
