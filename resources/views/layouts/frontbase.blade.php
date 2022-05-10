@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Airport Transfer Project - AirTra </title>
+    <title>Airport Transfer - AirTra </title>
 
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
