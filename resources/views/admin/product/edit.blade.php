@@ -108,8 +108,8 @@
                                         <label>Status</label>
                                         <select class="form-control" name="status">
                                             <option selected>{{$data->status}}</option>
-                                            <option>Enable</option>
-                                            <option>Disable</option>
+                                            <option>Available</option>
+                                            <option>Not Available</option>
                                         </select>
                                     </div>
                                     <button type="submit" class="btn btn-info">Update Data</button>

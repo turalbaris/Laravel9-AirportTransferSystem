@@ -29,15 +29,11 @@
                                 <h4>Add Product</h4>
                             </div>
                             <div class="panel-body">
-
-{{--                                maybe store ???  try later   --}}
-
                                 <form role="form" action="{{route('admin.product.store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label>Parent Product</label>
                                         <select class="form-control select2" name="category_id">
-
                                             @foreach($data as $rs)
                                                 <option value="{{$rs->id}}"> {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs, $rs->title)}}</option>
                                             @endforeach
@@ -109,8 +105,8 @@
                                     <div class="form-group">
                                         <label>Status</label>
                                         <select class="form-control" name="status">
-                                            <option>Enable</option>
-                                            <option>Disable</option>
+                                            <option>Available</option>
+                                            <option>Not Available</option>
                                         </select>
                                     </div>
                                     <button type="submit" class="btn btn-info">Save</button>
