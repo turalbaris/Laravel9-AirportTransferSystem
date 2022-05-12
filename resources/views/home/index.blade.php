@@ -109,7 +109,7 @@
                     <div class="card-header position-relative border-0 p-0 mb-4">
                         <img class="card-img-top" src="{{Storage::url($rs->image)}}" alt="0">
                         <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                            <h3 class="text-primary mb-3">{{$rs->title}}</h3>
+                            <h3 class="text-primary mb-3">{{$rs->category->title}}</h3>
                             <h1 class="display-4 text-white mb-0">
                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{$rs->km_price}}<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Km</small>
                             </h1>
@@ -117,14 +117,14 @@
                     </div>
                     <div class="card-body text-center p-0">
                         <ul class="list-group list-group-flush mb-4">
-                            <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{$rs->description}}</li>
+                            <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{$rs->title}}</li>
                             <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{$rs->capacity}} Person</li>
                             <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Base Price: {{$rs->base_price}}$</li>
                             <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>{{$rs->status}}</li>
                         </ul>
                     </div>
                     <div class="card-footer border-0 p-0">
-                        <a @if($rs->status=='Available') href="" @endif class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
+                        <a @if($rs->status=='Available') href="{{route('product',['id'=>$rs->id])}}" @endif class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Learn More</a>
                     </div>
                 </div>
             </div>

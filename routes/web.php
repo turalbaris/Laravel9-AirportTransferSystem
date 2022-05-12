@@ -28,6 +28,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
+
+Route::get( uri: '/product/{id}',action: [HomeController::class,'product'])->name('product');
+
+
 //*********************************** ADMIN PANEL   ROUTES *************************************//
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/',[AdminHomeController::class,'index'])->name('index');
