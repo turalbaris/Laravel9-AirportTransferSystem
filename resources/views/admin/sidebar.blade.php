@@ -60,7 +60,7 @@
                 <a href="/admin/faq"><i class="glyphicon glyphicon-question-sign"></i>FAQ</a>
             </li>
             <li>
-                <a class="active-menu" href="/admin/"><i class="glyphicon glyphicon-cog"></i>Settings</a>
+                <a class="active-menu" href="/admin/setting"><i class="glyphicon glyphicon-cog"></i>Settings</a>
             </li>
 
 
