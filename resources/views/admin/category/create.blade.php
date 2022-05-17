@@ -1,6 +1,7 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Add Category')
+@section('icon', Storage::url($setting->icon))
 
 @section('content')
 

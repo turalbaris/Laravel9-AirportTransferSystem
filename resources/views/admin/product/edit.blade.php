@@ -1,6 +1,7 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Edit Product: '.$data->title)
+@section('icon', Storage::url($setting->icon))
 
 @section('head')
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">

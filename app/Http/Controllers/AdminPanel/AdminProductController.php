@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminPanel;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -35,8 +36,10 @@ class AdminProductController extends Controller
         //Controller accessed the model and get data from the model
         //And we send these data to index area
         //we defined the foreach loop that lists all the data in the table.
+        $setting= Setting::first();
         $data= Product::all();
         return view('admin.product.index',[
+            'setting'=>$setting,
             'data' => $data
         ]);
     }
@@ -49,8 +52,10 @@ class AdminProductController extends Controller
     public function create()
     {
         //
+        $setting= Setting::first();
         $data= Category::all();
         return view('admin.product.create',[
+            'setting'=>$setting,
             'data' => $data
         ]);
     }
@@ -92,8 +97,10 @@ class AdminProductController extends Controller
     public function show(Product $product,$id)
     {
         //
+        $setting= Setting::first();
         $data= Product::find($id);
         return view('admin.product.show',[
+            'setting'=>$setting,
             'data' => $data
         ]);
     }
@@ -107,9 +114,11 @@ class AdminProductController extends Controller
     public function edit(Product $product,$id)
     {
         //Retrieve a model by its primary key......
+        $setting= Setting::first();
         $data= Product::find($id);
         $datalist= Category::all();
         return view('admin.product.edit',[
+            'setting'=>$setting,
             'data' => $data,
             'datalist' => $datalist
         ]);

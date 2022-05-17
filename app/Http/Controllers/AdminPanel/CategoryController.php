@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -36,8 +37,10 @@ class CategoryController extends Controller
         //Controller accessed the model and get data from the model
         //And we send these data to index area
         //we defined the foreach loop that lists all the data in the table.
+        $setting= Setting::first();
         $data= Category::all();
         return view('admin.category.index',[
+            'setting'=>$setting,
             'data' => $data
         ]);
     }
@@ -49,9 +52,10 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $setting= Setting::first();
         $data= Category::all();
         return view('admin.category.create',[
+            'setting'=>$setting,
             'data' => $data
         ]);
     }
@@ -86,9 +90,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category,$id)
     {
-        //
+        $setting= Setting::first();
         $data= Category::find($id);
         return view('admin.category.show',[
+            'setting'=>$setting,
             'data' => $data
         ]);
     }
@@ -102,9 +107,11 @@ class CategoryController extends Controller
     public function edit(Category $category,$id)
     {
         //Retrieve a model by its primary key......
+        $setting= Setting::first();
         $data= Category::find($id);
         $datalist= Category::all();
         return view('admin.category.edit',[
+            'setting'=>$setting,
             'data' => $data,
             'datalist' => $datalist
         ]);

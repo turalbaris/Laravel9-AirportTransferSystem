@@ -1,6 +1,8 @@
 @extends('layouts.frontbase')
 
 @section('title', $data->title)
+@section('icon', Storage::url($setting->icon))
+
 
 @section('content')
 

@@ -1,6 +1,7 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Add Product')
+@section('icon', Storage::url($setting->icon))
 
 @section('head')
     <!-- include libraries(jQuery, bootstrap) //// Summernote -->

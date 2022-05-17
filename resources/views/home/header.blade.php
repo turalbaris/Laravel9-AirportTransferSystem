@@ -12,19 +12,16 @@
         </div>
         <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
-                <a class="text-white px-3" href="">
+                <a class="text-white px-3" href="{!! $setting->facebook !!}">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a class="text-white px-3" href="">
+                <a class="text-white px-3" href="{!! $setting->twitter !!}">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="text-white px-3" href="">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="text-white px-3" href="">
+                <a class="text-white px-3" href="{!! $setting->instagram !!}">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="text-white pl-3" href="">
+                <a class="text-white pl-3" href="{!! $setting->youtube !!}">
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
@@ -32,7 +29,7 @@
     </div>
     <div class="row py-3 px-lg-5">
         <div class="col-lg-4">
-            <a href="" class="navbar-brand d-none d-lg-block">
+            <a href="/" class="navbar-brand d-none d-lg-block">
                 <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">Air</span>Tra</h1>
             </a>
         </div>
@@ -44,11 +41,11 @@
                 </div>
                 <div class="d-inline-flex flex-column text-center px-3 border-right">
                     <h6>Email Us</h6>
-                    <p class="m-0">airtra@hotmail.com</p>
+                    <p class="m-0">{!! $setting->email !!}</p>
                 </div>
                 <div class="d-inline-flex flex-column text-center pl-3">
                     <h6>Call Us</h6>
-                    <p class="m-0">+012 345 6789</p>
+                    <p class="m-0">{!! $setting->phone !!}</p>
                 </div>
             </div>
         </div>
@@ -67,7 +64,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
             <div class="navbar-nav mr-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="price.html" class="nav-item nav-link">Price</a>

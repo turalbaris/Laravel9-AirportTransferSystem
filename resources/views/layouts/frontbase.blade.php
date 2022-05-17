@@ -4,15 +4,14 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Airport Transfer - AirTra </title>
-
-
+    <title>@yield("title")</title>
+    <meta name="description" content="@yield("description")">
+    <meta name="keywords" content="@yield("keywords")">
+    <meta name="author" content="Baris TURAL">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{{asset('assets')}}/img/favicon.ico" rel="icon">
+    <link href="@yield("icon")" rel="icon">
 
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">

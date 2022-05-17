@@ -1,6 +1,8 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Settings')
+@section('title', $data->title)
+@section('icon', Storage::url($data->icon))
 
 @section('head')
     <!-- include summernote css/js //// Summernote -->
@@ -17,6 +19,7 @@
                     <h1 class="page-head-line">Settings</h1>
 
                     <form role="form" action="{{route('admin.setting.update')}}" method="post" enctype="multipart/form-data">
+                        @csrf
                         <div class="col-12">
                             <div class="panel panel-default">
                                 <div class="panel-body">
@@ -67,7 +70,7 @@
                                             </div>
                                             <div class="">
                                                 <label>Phone</label>
-                                                <input type="text" name="phone" value="{{$data->phone}}" class="form-control">
+                                                <input type="number" name="phone" value="{{$data->phone}}" class="form-control">
                                             </div>
                                             <div class="">
                                                 <label>Fax</label>
@@ -75,7 +78,7 @@
                                             </div>
                                             <div class="">
                                                 <label>Email</label>
-                                                <input type="text" name="email" value="{{$data->email}}" class="form-control">
+                                                <input type="email" name="email" value="{{$data->email}}" class="form-control">
                                             </div>
                                             <div class="">
                                                 <label>Status</label>
@@ -84,6 +87,10 @@
                                                     <option>True</option>
                                                     <option>False</option>
                                                 </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Icon</label>
+                                                <input class="form-control" type="file" name="icon" >
                                             </div>
                                         </div>
 
@@ -94,15 +101,15 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Smtp Email</label>
-                                                <input type="text" name="smtpemail" value="{{$data->smtpemail}}" class="form-control">
+                                                <input type="email" name="smtpemail" value="{{$data->smtpemail}}" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>Smtp Password</label>
-                                                <input type="text" name="smtppassword" value="{{$data->smtppassword}}" class="form-control">
+                                                <input type="password" name="smtppassword" value="{{$data->smtppassword}}" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label>Smtp Port</label>
-                                                <input type="text" name="smtpport" value="{{$data->smtpport}}" class="form-control">
+                                                <input type="number" name="smtpport" value="{{$data->smtpport}}" class="form-control">
                                             </div>
                                         </div>
 

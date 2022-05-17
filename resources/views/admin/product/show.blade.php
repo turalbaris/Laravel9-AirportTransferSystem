@@ -1,6 +1,7 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Show Product: '.$data->title)
+@section('icon', Storage::url($setting->icon))
 
 @section('content')
 
