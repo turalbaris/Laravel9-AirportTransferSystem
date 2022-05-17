@@ -2,6 +2,11 @@
 
 @section('title', 'Settings')
 
+@section('head')
+    <!-- include summernote css/js //// Summernote -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
 
     <!-- /. PAGE WRAPPER  -->
@@ -80,8 +85,6 @@
                                                     <option>False</option>
                                                 </select>
                                             </div>
-                                            <hr>
-                                            <button type="submit" class="btn btn-info">Update Setting</button>
                                         </div>
 
                                         <div class="tab-pane fade" id="smptp-email-pills">
@@ -141,8 +144,9 @@
                                                 <label>References</label>
                                                 <textarea id="references" name="references">{{$data->references}}</textarea>
                                             </div>
-                                            {{-- Summernote script--}}
                                         </div>
+                                        <hr>
+                                        <button type="submit" class="btn btn-info">Update Setting</button>
 
                                     </div>
                                 </div>
@@ -156,4 +160,15 @@
         <!-- /. PAGE INNER  -->
     </div>
     <!-- /. PAGE WRAPPER  -->
+@endsection
+
+@section('foot')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#references').summernote({height: 180});
+            $('#aboutus').summernote({height: 180});
+            $('#contact').summernote({height: 180});
+        });
+    </script>
 @endsection
