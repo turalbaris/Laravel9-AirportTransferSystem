@@ -66,6 +66,7 @@
             <div class="navbar-nav mr-auto py-0">
                 <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="{{route('about')}}" class="nav-item nav-link">About</a>
+                <a href="{{route('references')}}" class="nav-item nav-link">References</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="price.html" class="nav-item nav-link">Price</a>
                 <a href="{{asset('assets')}}/booking.html" class="nav-item nav-link">Booking</a>
