@@ -28,6 +28,13 @@ class HomeController extends Controller
         ]);
     }
 
+    public function about(){
+        $setting= Setting::first();
+        return view('home.about',[
+            'setting'=>$setting
+        ]);
+    }
+
     public function product($id){
         $setting= Setting::first();
         $data=Product::find($id);

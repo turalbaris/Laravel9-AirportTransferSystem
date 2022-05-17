@@ -65,7 +65,7 @@
         <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
             <div class="navbar-nav mr-auto py-0">
                 <a href="/" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="{{route('about')}}" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="price.html" class="nav-item nav-link">Price</a>
                 <a href="{{asset('assets')}}/booking.html" class="nav-item nav-link">Booking</a>
@@ -76,7 +76,7 @@
                         <a href="single.html" class="dropdown-item">Blog Detail</a>
                     </div>
                 </div>
-                <a href="{{asset('assets')}}/contact.html" class="nav-item nav-link">Contact</a>
+                <a href="#" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Sign in</a>
         </div>

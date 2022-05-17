@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryControlle
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\HomeController;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Call controller function
+//*********************************** HOME PAGE ROUTES *************************************//
 Route::get( uri: '/',action: [HomeController::class,'index'])->name('home');
+Route::get( uri: '/about-us',action: [HomeController::class,'about'])->name('about');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
