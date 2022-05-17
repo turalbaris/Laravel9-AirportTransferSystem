@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Route;
 Route::get( uri: '/',action: [HomeController::class,'index'])->name('home');
 Route::get( uri: '/about-us',action: [HomeController::class,'about'])->name('about');
 Route::get( uri: '/references',action: [HomeController::class,'references'])->name('references');
+Route::get( uri: '/contact-us',action: [HomeController::class,'contact'])->name('contact');
+Route::post( uri: '/storemessage',action: [HomeController::class,'storemessage'])->name('storemessage');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

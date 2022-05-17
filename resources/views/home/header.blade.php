@@ -70,6 +70,7 @@
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="price.html" class="nav-item nav-link">Price</a>
                 <a href="{{asset('assets')}}/booking.html" class="nav-item nav-link">Booking</a>
+                <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu rounded-0 m-0">
@@ -77,7 +78,6 @@
                         <a href="single.html" class="dropdown-item">Blog Detail</a>
                     </div>
                 </div>
-                <a href="#" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Sign in</a>
         </div>

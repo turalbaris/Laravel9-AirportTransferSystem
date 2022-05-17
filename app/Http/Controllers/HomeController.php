@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
@@ -9,12 +10,6 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-
-    //I'll delete any unnecessary functions later
-    //I'll delete any unnecessary functions later
-
-
-
 
     public function index(){
         $sliderdata=Product::limit(3)->get();
@@ -42,6 +37,28 @@ class HomeController extends Controller
         ]);
     }
 
+    public function contact(){
+        $setting= Setting::first();
+        return view('home.contact',[
+            'setting'=>$setting
+        ]);
+    }
+
+    public function storemessage(Request $request){
+        //dd($request);
+        $data = new Message();
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->phone = $request->input('phone');
+        $data->subject = $request->input('subject');
+        $data->message = $request->input('message');
+        $data->ip = request()->ip();
+        $data->save();
+
+        return redirect()->route('contact')->with('info','Your message has been sent, Thank you.');
+    }
+
+
     public function product($id){
         $setting= Setting::first();
         $data=Product::find($id);
@@ -52,33 +69,6 @@ class HomeController extends Controller
             'images'=>$images
         ]);
     }
-
-
-//
-//    public function param($id){
-//        echo "1.Parameter is: ", $id ;
-//    }
-//
-//
-//
-//    public function param2($id,$number)
-//    {
-//        return view('home.test2parameters', [
-//            'id' => $id,
-//            'number' => $number
-//        ]);
-//    }
-//
-//    public function save(Request $request){
-//        echo "Save Function :))) ";
-//        echo "<br>First Name :",$_REQUEST["fname"];
-//        echo "<br>Last Name :",$_REQUEST["lname"];
-//    }
-
-
-
-
-
 
 
 }
