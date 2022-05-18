@@ -48,7 +48,7 @@
                 <a href="/admin/comment"><i class="glyphicon glyphicon-comment"></i>Comments</a>
             </li>
             <li>
-                <a href="/admin/messages"><i class="glyphicon glyphicon-bullhorn"></i>Messages</a>
+                <a href="{{route('admin.message.index')}}"><i class="glyphicon glyphicon-bullhorn"></i>Messages</a>
             </li>
             <li>
                 <a href="/admin/user"><i class="glyphicon glyphicon-user"></i>Users</a>
