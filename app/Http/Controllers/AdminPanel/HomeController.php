@@ -6,16 +6,21 @@ use App\Http\Controllers\Controller;
 use App\Models\Setting;
 use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     //
 
     public function index (){
+        //Returns the number of unread messages. :)))
+        //https://laravel.com/docs/9.x/queries#aggregates
         $setting= Setting::first();
+        $newcount = DB::table('messages')->where('status', '=', 'New')->get()->count();
 
         return view ("admin.index",[
-            'setting'=>$setting
+            'setting'=>$setting,
+            'newcount' => $newcount
         ]);
     }
 

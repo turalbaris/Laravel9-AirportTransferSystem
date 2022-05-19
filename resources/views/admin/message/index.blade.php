@@ -10,8 +10,21 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <!--   Kitchen Sink -->
-                    <!--    md-6 changed to md-12 to cover all of the div-->
+                    @if ($newcount > 1)
+                        <div class="alert alert-danger text-center">
+                            <strong>You have {{$newcount}} new messages.</strong>
+                        </div>
+                    @endif
+                    @if ($newcount == 1)
+                        <div class="alert alert-danger text-center">
+                            <strong>You have {{$newcount}} new message.</strong>
+                        </div>
+                    @endif
+                    @if ($newcount == 0)
+                        <div class="alert alert-info text-center">
+                            <strong>You have no new messages.</strong>
+                        </div>
+                    @endif
                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">

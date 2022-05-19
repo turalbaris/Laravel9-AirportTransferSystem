@@ -17,11 +17,16 @@ class MessageController extends Controller
      */
     public function index()
     {
+        //Returns the number of unread messages. :)))
+        //https://laravel.com/docs/9.x/queries#aggregates
+        $newcount = DB::table('messages')->where('status', '=', 'New')->get()->count();
+
         $setting= Setting::first();
         $data= Message::all();
         return view('admin.message.index',[
             'setting'=>$setting,
-            'data' => $data
+            'data' => $data,
+            'newcount' => $newcount
         ]);
     }
 
