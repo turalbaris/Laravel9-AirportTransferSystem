@@ -14,13 +14,11 @@
                         <div class="alert alert-danger text-center">
                             <strong>You have {{$newcount}} new messages.</strong>
                         </div>
-                    @endif
-                    @if ($newcount == 1)
+                    @elseif ($newcount == 1)
                         <div class="alert alert-danger text-center">
                             <strong>You have {{$newcount}} new message.</strong>
                         </div>
-                    @endif
-                    @if ($newcount == 0)
+                    @else ($newcount == 0)
                         <div class="alert alert-info text-center">
                             <strong>You have no new messages.</strong>
                         </div>

@@ -57,7 +57,7 @@
                 <a href="/admin/social"><i class="glyphicon glyphicon-link"></i>Social</a>
             </li>
             <li>
-                <a href="/admin/faq"><i class="glyphicon glyphicon-question-sign"></i>FAQ</a>
+                <a href="{{route('admin.faq.index')}}"><i class="glyphicon glyphicon-question-sign"></i>FAQ</a>
             </li>
             <li>
                 <a class="active-menu" href="/admin/setting"><i class="glyphicon glyphicon-cog"></i>Settings</a>

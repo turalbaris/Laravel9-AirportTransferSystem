@@ -23,10 +23,10 @@
                     <h5 class="text-primary mb-4">Popular Links</h5>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-white mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="{{route('about')}}"><i class="fa fa-angle-right mr-2"></i>About Us</a>
                         <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
-                        <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        <a class="text-white mb-2" href="{{route('contact')}}"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        <a class="text-white" href="{{route('faq')}}"><i class="fa fa-angle-right mr-2"></i>Faq</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -64,10 +64,7 @@
                     <a class="nav-link text-white py-0" href="#">Terms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">FAQs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white py-0" href="#">Help</a>
+                    <a class="nav-link text-white py-0" href="{{route('faq')}}">FAQs</a>
                 </li>
             </ul>
         </div>

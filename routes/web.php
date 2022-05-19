@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminPanel\AdminProductController;
 use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
+use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
@@ -27,6 +28,7 @@ Route::get( uri: '/about-us',action: [HomeController::class,'about'])->name('abo
 Route::get( uri: '/references',action: [HomeController::class,'references'])->name('references');
 Route::get( uri: '/contact-us',action: [HomeController::class,'contact'])->name('contact');
 Route::post( uri: '/storemessage',action: [HomeController::class,'storemessage'])->name('storemessage');
+Route::get( uri: '/faq',action: [HomeController::class,'faq'])->name('faq');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -83,7 +85,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/delete/{id}','destroy')->name('destroy');
     });
 
-
+    //***********************************  ADMIN FAQ   ROUTES *************************************//
+    Route::prefix('/faq')->name('faq.')->controller(FaqController::class)->group(function () {
+        Route::get('/','index')->name('index');
+        Route::get('/create','create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}','edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/delete/{id}','destroy')->name('destroy');
+        Route::get('/show/{id}','show')->name('show');
+    });
 
 
 });
