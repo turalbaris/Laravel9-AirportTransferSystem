@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Faq;
 use App\Models\Message;
 use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -66,18 +68,41 @@ class HomeController extends Controller
         $data->ip = request()->ip();
         $data->save();
 
-        return redirect()->route('contact')->with('info','Your message has been sent, Thank you.');
+        return redirect()->route('contact')->with('info','Your review has been sent, Thank you.');
+    }
+
+    public function storecomment(Request $request){
+        //dd($request);
+        $data = new Comment();
+        $data->id = $request->input('id');
+        $data->user_id = Auth::id();
+        $data->product_id = $request->input('product_id');
+        $data->subject = $request->input('subject');
+        $data->review = $request->input('review');
+        $data->rate = $request->input('rate');
+        $data->ip = request()->ip();
+        $data->save();
+
+        return redirect()->route('product',['id'=>$request->input('product_id')])->with('success','Your comment has been sent, Thank you.');
     }
 
 
     public function product($id){
+        //Returns the number of reviews for that product
+        //https://laravel.com/docs/9.x/queries#aggregates
+        $reviewscount = DB::table('comments')->where('product_id', '=', $id)->get()->count();
+        $reviewsavg = DB::table('comments')->where('product_id', $id)->avg('rate');
         $setting= Setting::first();
         $data=Product::find($id);
         $images = DB::table('images')->where('product_id',$id)->get();
+        $reviews = Comment::where('product_id',$id)->get();
         return view('home.product',[
             'setting'=>$setting,
             'data'=>$data,
-            'images'=>$images
+            'images'=>$images,
+            'reviews'=>$reviews,
+            'reviewscount'=>$reviewscount,
+            'reviewsavg'=>$reviewsavg
         ]);
     }
 

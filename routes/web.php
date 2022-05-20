@@ -29,6 +29,7 @@ Route::get( uri: '/references',action: [HomeController::class,'references'])->na
 Route::get( uri: '/contact-us',action: [HomeController::class,'contact'])->name('contact');
 Route::post( uri: '/storemessage',action: [HomeController::class,'storemessage'])->name('storemessage');
 Route::get( uri: '/faq',action: [HomeController::class,'faq'])->name('faq');
+Route::post( uri: '/storecomment',action: [HomeController::class,'storecomment'])->name('storecomment');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
