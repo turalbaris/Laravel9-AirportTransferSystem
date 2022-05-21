@@ -95,7 +95,7 @@ class HomeController extends Controller
         $setting= Setting::first();
         $data=Product::find($id);
         $images = DB::table('images')->where('product_id',$id)->get();
-        $reviews = Comment::where('product_id',$id)->get();
+        $reviews = Comment::where('product_id',$id)->where('status','True')->get();
         return view('home.product',[
             'setting'=>$setting,
             'data'=>$data,

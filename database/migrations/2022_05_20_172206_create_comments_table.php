@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('review')->nullable();
             $table->string('IP',20)->nullable();
             $table->integer('rate')->default(0);;
-            $table->string('status',15)->nullable()->default('False');
+            $table->string('status',15)->nullable()->default('New');
             $table->timestamps();
         });
     }
