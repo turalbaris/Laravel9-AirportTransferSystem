@@ -89,9 +89,15 @@
                                         <option id="star1" name="rate" value="1">1 Star </option>
                                     </select>
                                 </div>
-                                <div class="form-group mb-0">
-                                    <input type="submit" value="Leave Comment" class="btn btn-primary px-3">
-                                </div>
+                                @auth
+                                    <div class="form-group mb-0">
+                                        <input type="submit" value="Leave Comment" class="btn btn-primary px-3">
+                                    </div>
+                                @else
+                                    <div class="form-group mb-0">
+                                        <a href="/login" class="btn btn-primary px-3">For Submit Your Review, Please Login</a>
+                                    </div>
+                                @endauth
                             </form>
                         </div>
                     </div>
@@ -104,7 +110,7 @@
         <!-- Review Start -->
         <div class="col-lg-8 py-3">
             <h3 class="col-lg-8 py-3">@if ($reviewscount == 0) No Comment @elseif($reviewscount == 1)1 Comment @else{{$reviewscount}} Comments @endif -
-                {{$reviewsavg}}<hr></h3>
+                {{number_format($reviewsavg,1)}}<hr></h3>
             @foreach($reviews as $rs)
             <div class="media mb-4">
                 <img src="{{asset('assets')}}/img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
@@ -112,11 +118,9 @@
                     <h6>{{$rs->user->name}} <small><i>{{$rs->created_at}}</i></small><i> - 5/{{$rs->rate}}</i></h6>
                     <strong>{{$rs->subject}}</strong>
                     <p>{{$rs->review}} ve </p>
-
                 </div>
             </div>
             @endforeach
-
         </div>
         <!-- Review End -->
 

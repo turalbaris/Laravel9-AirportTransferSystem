@@ -88,10 +88,17 @@ class HomeController extends Controller
 
 
     public function product($id){
-        //Returns the number of reviews for that product
         //https://laravel.com/docs/9.x/queries#aggregates
-        $reviewscount = DB::table('comments')->where('product_id', '=', $id)->get()->count();
-        $reviewsavg = DB::table('comments')->where('product_id', $id)->avg('rate');
+        //Returns the number of reviews for the product that published.
+        $reviewscount = DB::table('comments')
+            ->where('product_id', '=', $id)
+            ->where('status', '=', 'True')
+            ->get()->count();
+        //Returns the average of given stars for the product that published.
+        $reviewsavg = DB::table('comments')
+            ->where('product_id', '=', $id)
+            ->where('status', '=', 'True')
+            ->avg('rate');
         $setting= Setting::first();
         $data=Product::find($id);
         $images = DB::table('images')->where('product_id',$id)->get();
