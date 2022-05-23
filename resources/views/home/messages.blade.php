@@ -29,7 +29,16 @@
 @if ($errors->any())
     <div class="alert alert-danger">
         <button type="button" class="close">x</button>
-        <strong>Check the following erros :(</strong>
+        <strong>Check the entered information.</strong>
     </div>
 @endif
+
+@if ($message = Session::get('email'))
+    <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        Check.</a>.
+    </div>
+@endif
+
+
 

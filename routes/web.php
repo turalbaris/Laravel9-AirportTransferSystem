@@ -34,6 +34,8 @@ Route::post( uri: '/storecomment',action: [HomeController::class,'storecomment']
 Route::view('/user-login', 'home.login');
 Route::view('/user-register', 'home.register');
 Route::get( uri: '/user-logout',action: [HomeController::class,'logout'])->name('logoutuser');
+Route::view('/admin-login', 'admin.login');
+Route::post( uri: '/admin-login-check',action: [HomeController::class,'adminlogincheck'])->name('adminlogincheck');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

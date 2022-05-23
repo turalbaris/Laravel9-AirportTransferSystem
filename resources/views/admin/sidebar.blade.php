@@ -6,9 +6,14 @@
                     <img src="{{asset('assets')}}/admin/img/user.png" class="img-thumbnail" />
 
                     <div class="inner-text">
-                        Baris Tural
+                        {{ Auth::user()->name }}
+
                         <br />
-                        <small>Last Login : 2 Minutes Ago </small>
+                        <small> {{ Auth::user()->email }}</small>
+                        <br>
+                        <div>
+                            <a class="btn btn-primary py-3 px-5" href="/user-logout">Log out</a>
+                        </div>
                     </div>
                 </div>
 
