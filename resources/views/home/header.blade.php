@@ -79,8 +79,21 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Sign in</a>
         </div>
+        @auth
+
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}}</a>
+            <div class="dropdown-menu ">
+                <a href="" class="dropdown-item">Profile</a>
+                <a href="/user-logout" class="dropdown-item">Log out</a>
+            </div>
+        </div>
+        @endauth
+        @guest
+            <a href="/user-register" class="btn btn-lg btn-primary px-3 d-none d-lg-block mr-5">Register</a>
+            <a href="/user-login" class="btn btn-lg btn-primary px-3 d-none d-lg-block">Sign in</a>
+        @endguest
     </nav>
 </div>
 <!-- Navbar End -->

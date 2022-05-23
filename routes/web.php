@@ -31,6 +31,9 @@ Route::get( uri: '/contact-us',action: [HomeController::class,'contact'])->name(
 Route::post( uri: '/storemessage',action: [HomeController::class,'storemessage'])->name('storemessage');
 Route::get( uri: '/faq',action: [HomeController::class,'faq'])->name('faq');
 Route::post( uri: '/storecomment',action: [HomeController::class,'storecomment'])->name('storecomment');
+Route::view('/user-login', 'home.login');
+Route::view('/user-register', 'home.register');
+Route::get( uri: '/user-logout',action: [HomeController::class,'logout'])->name('logoutuser');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
