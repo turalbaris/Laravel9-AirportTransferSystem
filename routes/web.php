@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//when we call any route, we call it with its name.
 
 
 //*********************************** HOME PAGE ROUTES *************************************//
@@ -32,10 +33,10 @@ Route::get( uri: '/contact-us',action: [HomeController::class,'contact'])->name(
 Route::post( uri: '/storemessage',action: [HomeController::class,'storemessage'])->name('storemessage');
 Route::get( uri: '/faq',action: [HomeController::class,'faq'])->name('faq');
 Route::post( uri: '/storecomment',action: [HomeController::class,'storecomment'])->name('storecomment');
-Route::view('/user-login', 'home.login');
-Route::view('/user-register', 'home.register');
+Route::view('/user-login', 'home.login')->name('userlogin');
+Route::view('/user-register', 'home.register')->name('registeruser');
 Route::get( uri: '/user-logout',action: [HomeController::class,'logout'])->name('logoutuser');
-Route::view('/admin-login', 'admin.login');
+Route::view('/admin-login', 'admin.login')->name('adminlogin');
 Route::post( uri: '/admin-login-check',action: [HomeController::class,'adminlogincheck'])->name('adminlogincheck');
 
 
@@ -49,7 +50,7 @@ Route::get( uri: '/product/{id}',action: [HomeController::class,'product'])->nam
 
 
 //*********************************** ADMIN PANEL   ROUTES *************************************//
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/',[AdminHomeController::class,'index'])->name('index');
 
 //*********************************** GENERAL   ROUTES *************************************//

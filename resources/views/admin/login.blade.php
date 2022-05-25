@@ -47,7 +47,7 @@
                 <form role="form" action="{{route('adminlogincheck')}}" method="post">
                     @csrf
                     <hr />
-                    <h5>Enter Details to Login Admin Panel</h5>
+                    <h5> {{ __('Enter Details to Login Admin Panel') }}</h5>
                     <br />
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="fa fa-tag"></i></span>
@@ -59,15 +59,18 @@
                     </div>
                     <div class="form-group">
                         <label class="checkbox-inline">
-                            <input type="checkbox" /> Remember me
+                            <input type="checkbox" />  {{ __('Remember me') }}
                         </label>
                         <span class="pull-right">
-                            <a href="index.html">Forget password ? </a>
+                            <a href="{{ route('password.request') }}"> {{ __('Forgot password?') }}</a>
                         </span>
                     </div>
-                    <button type="submit" href="index.html" class="btn btn-primary ">Login Now</button>
+                    <button type="submit" href="index.html" class="btn btn-primary ">{{ __('Login Now ') }}</button>
+                    <span class="pull-right">
+                            <a href="{{ route('userlogin') }}"> {{ __('I am not an administrator.') }}</a>
+                        </span>
                     <hr />
-                    Not register ? <a href="/user-register">click here </a> or go to <a href="/">Home</a>
+                    {{ __('Not register ? ') }}<a href="{{ route('register') }}">{{ __('click here ') }}</a>{{ __(' or to go to ') }}<a href="/">{{ __('Home') }}</a>
                 </form>
             </div>
         </div>

@@ -27,7 +27,6 @@
                                         <th>Email</th>
                                         <td>{{$data->email}}</td>
                                     </tr>
-
                                     <tr>
                                         <th>Roles</th>
                                         <td>
@@ -63,10 +62,8 @@
             </div>
         </div>
     </div>
-    <!-- /. ROW  -->
     <div class="panel-heading">
         AIRTRA
     </div>
-    </div>
-    <!-- /. PAGE INNER  -->
+</div>
 @endsection

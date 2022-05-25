@@ -5,7 +5,6 @@
 
 @section('content')
 
-    <!-- /. PAGE WRAPPER  -->
     <div id="page-wrapper">
         <div id="page-inner">
             <div class="row">
@@ -50,15 +49,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- End  Kitchen Sink -->
-
             </div>
         </div>
-        <!-- /. ROW  -->
-
     </div>
-    <!-- /. PAGE INNER  -->
-    </div>
-    <!-- /. PAGE WRAPPER  -->
-
+</div>
 @endsection
