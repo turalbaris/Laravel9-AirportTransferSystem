@@ -52,7 +52,7 @@
         <h3 class="mb-3">KM Price</h3>
         <p>{!! $data->km_price !!}$</p>
         <h3 class="mb-3">Tax Rate</h3>
-        <p>{!! $data->tax !!}$</p>
+        <p>%{!! $data->tax !!}</p>
         <h3 class="mb-3">Status</h3>
         <p>{!! $data->status !!}</p>
     </div>

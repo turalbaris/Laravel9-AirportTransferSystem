@@ -59,7 +59,7 @@
                 <a href="/admin/user"><i class="glyphicon glyphicon-user"></i>Users</a>
             </li>
             <li>
-                <a href="/admin/social"><i class="glyphicon glyphicon-link"></i>Social</a>
+                <a href="/admin/location"><i class="glyphicon glyphicon-link"></i>Locations</a>
             </li>
             <li>
                 <a href="{{route('admin.faq.index')}}"><i class="glyphicon glyphicon-question-sign"></i>FAQ</a>
