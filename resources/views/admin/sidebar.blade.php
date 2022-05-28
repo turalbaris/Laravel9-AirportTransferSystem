@@ -30,13 +30,13 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="/admin/new-rezervation"><i class="glyphicon glyphicon-chevron-right"></i>New Reservations</a>
+                        <a href="/admin/rezervation/newrezervation"><i class="glyphicon glyphicon-chevron-right"></i>New Reservations</a>
                     </li>
                     <li>
-                        <a href="/admin/accepted-rezervation"><i class="glyphicon glyphicon-chevron-right"></i>Accepted Reservations</a>
+                        <a href="/admin/rezervation/acceptedrezervation"><i class="glyphicon glyphicon-chevron-right"></i>Accepted Reservations</a>
                     </li>
                     <li>
-                        <a href="/admin/completed-rezervation"><i class="glyphicon glyphicon-chevron-right"></i>Completed Reservations</a>
+                        <a href="/admin/rezervation/completedrezervation"><i class="glyphicon glyphicon-chevron-right"></i>Completed Reservations</a>
                     </li>
 
                 </ul>

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->time('pickuptime', $precision = 0)->nullable();
             $table->string('note',500)->nullable();
             $table->string('ip',50)->nullable();
-            $table->string('status',5)->nullable()->default('New');
+            $table->string('status',10)->nullable()->default('New');
             $table->timestamps();
         });
     }

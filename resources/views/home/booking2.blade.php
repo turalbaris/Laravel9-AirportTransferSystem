@@ -21,6 +21,8 @@
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}" required="required" />
                             {{--takes vehicle id--}}
                             <input type="hidden" name="product_id" value="{{$findTransfer->id}}" required="required" />
+                            {{--takes status as new--}}
+                            <input type="hidden" name="status" value="New" required="required" />
                             <div class="form-group">
                                 <div>
                                     {{--takes price--}}

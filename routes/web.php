@@ -142,6 +142,39 @@ Route::get( uri: '/product/{id}',action: [HomeController::class,'product'])->nam
             Route::get('/delete/{id}', 'destroy')->name('destroy');
             Route::get('/show/{id}', 'show')->name('show');
         });
+
+        //*********************************** ADMIN REZERVATION  ROUTES *************************************//
+        Route::prefix('/rezervation')->name('rezervation.')->controller(RezervationController::class)->group(function () {
+            //***********************************  ADMIN NEW REZERVATION   ROUTES *************************************//
+            Route::prefix('/newrezervation')->name('newrezervation.')->controller(RezervationController::class)->group(function () {
+                Route::get('/', 'index')->name('index');
+                Route::get('/show/{id}/{uid}/{pid}', 'show')->name('show');
+                Route::post('/update/{id}', 'update')->name('update');
+                Route::get('/delete/{id}', 'destroy')->name('destroy');
+            });
+            //***********************************  ADMIN ACCEPTED REZERVATION   ROUTES *************************************//
+            Route::prefix('/acceptedrezervation')->name('acceptedrezervation.')->controller(RezervationController::class)->group(function () {
+                Route::get('/', 'acceptedindex')->name('index');
+                Route::get('/show/{id}/{uid}/{pid}', 'showcompleted')->name('show');
+                Route::post('/update/{id}', 'acceptedupdate')->name('update');
+                Route::get('/delete/{id}', 'accepteddestroy')->name('destroy');
+            });
+            //***********************************  ADMIN COMPLETED REZERVATION   ROUTES *************************************//
+            Route::prefix('/completedrezervation')->name('completedrezervation.')->controller(RezervationController::class)->group(function () {
+                Route::get('/', 'completedindex')->name('index');
+                Route::get('/show/{id}/{uid}/{pid}', 'completedshow')->name('show');
+                Route::post('/update/{id}', 'completedupdate')->name('update');
+                Route::get('/delete/{id}', 'completeddestroy')->name('destroy');
+            });
+
+        });
+
+
+
+
+
+
+
     });
 
 
