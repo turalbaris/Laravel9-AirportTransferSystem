@@ -18,7 +18,7 @@
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
-                    <form id="form-group" action="{{route("storemessage")}}" class="clearfix" method="post" novalidate="novalidate">
+                    <form id="form-group" action="{{route("storemessage")}}" class="clearfix" method="post">
                         @csrf
                         <div class="control-group">
                             <input type="text" class="form-control p-4" name="name" placeholder="Your Name & Surname" required="required" data-validation-required-message="Please enter your name and surname" maxlength="50" />

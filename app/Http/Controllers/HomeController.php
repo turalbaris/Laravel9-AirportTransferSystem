@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use App\Models\Faq;
+use App\Models\Location;
 use App\Models\Message;
 use App\Models\Product;
+use App\Models\Rezervation;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -47,15 +49,74 @@ class HomeController extends Controller
         ]);
     }
 
-    public function faq(){
-        $datalist= Faq::all();
-        $setting= Setting::first();
-        return view('home.faq',[
-            'setting'=>$setting,
-            'datalist'=>$datalist
-        ]);
 
+    public function booking(Request $request){
+       // dd($request);
+        $vehicle = Product::all();
+        $data= Location::all();
+        $setting= Setting::first();
+        $findProductId =Product::find($request->product_id);
+        return view('home.booking',[
+            'setting'=>$setting,
+            'data'=>$data,
+            'vehicle'=>$vehicle,
+            'findProductId'=>$findProductId
+        ]);
     }
+
+    public function booking2(Request $request){
+        //dd($request);
+        $setting= Setting::first();
+        $data= Location::all();
+        $findToLocation =Location::find($request->to_location_id);
+        $findFromLocation =Location::find($request->from_location_id);
+        $findTransfer =Product::find($request->transferInfo);
+
+        //Calculates distance between chosen two locations
+        $distance = (sqrt(pow($findFromLocation->lat-$findToLocation->lat,2)+
+            pow($findFromLocation->long-$findToLocation->long,2))*100);
+        $price = (($findTransfer->base_price)+($findTransfer->km_price)*$distance);
+
+        return view('home.booking2',[
+            'findToLocation'=>$findToLocation,
+            'findFromLocation'=>$findFromLocation,
+            'findTransfer'=>$findTransfer,
+            'setting'=>$setting,
+            'data'=>$data,
+            'distance'=>$distance,
+            'price'=>$price
+        ]);
+    }
+
+    public function storerezervation(Request $request){
+        //dd($request);
+        $data = new Rezervation();
+        $data->user_id = $request->input('user_id');
+        $data->product_id = $request->input('product_id');
+        $data->from_location_id = $request->input('from_location_id');
+        $data->to_location_id = $request->input('to_location_id');
+        $data->price = $request->input('price');
+        $data->Airline = $request->input('Airline');
+        $data->flightnumber = $request->input('flightnumber');
+        $data->flightdate = $request->input('flightdate');
+        $data->flightime = $request->input('flightime');
+        $data->pickuptime = $request->input('pickuptime');
+        $data->Airline = $request->input('Airline');
+        $data->note = $request->input('note');
+        $data->ip = request()->ip();
+        $data->status = $request->input('status');
+        $data->save();
+
+        return redirect()->route('booking')->with('info','Your rezervation request has been sent, Wait for a confirmation mail. Thank you.');
+    }
+//    I will change this part, It will go to the user profile reservation details, but later
+
+
+
+
+
+
+
 
     public function storemessage(Request $request){
         //dd($request);
@@ -70,6 +131,17 @@ class HomeController extends Controller
 
         return redirect()->route('contact')->with('info','Your review has been sent, Thank you.');
     }
+
+
+    public function faq(){
+        $datalist= Faq::all();
+        $setting= Setting::first();
+        return view('home.faq',[
+            'setting'=>$setting,
+            'datalist'=>$datalist
+        ]);
+    }
+
 
     public function storecomment(Request $request){
         //dd($request);

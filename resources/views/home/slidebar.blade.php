@@ -9,8 +9,7 @@
                         <h3 class="text-white mb-3 d-none d-sm-block">Best Transfer Reservation Services</h3>
                         <h1 class="display-3 text-white mb-3">Premium Transfer Services</h1>
                         <h5 class="text-white mb-3 d-none d-sm-block">Slide for our fleet.</h5>
-                        <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
-                        <a href="" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
+                        <a href="{{route('booking')}}" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -22,8 +21,12 @@
                             <h3 class="text-white mb-3 d-none d-sm-block">Best Transfer Reservation Services</h3>
                             <h2 class="display-3 text-white mb-3">{{$rs->title}}</h2>
                             <h5 class="text-white mb-3 d-none d-sm-block">{{$rs->description}}</h5>
-                            <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
-                            <a href="{{route('product',['id'=>$rs->id])}}" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
+                            <form method="get" action="{{route('booking')}}">
+                                @csrf
+                                <button name="product_id" value="{{$rs->id}}" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
+                            </form>
+
+                            <button href="{{route('product',['id'=>$rs->id])}}" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</button>
                         </div>
                     </div>
                 </div>

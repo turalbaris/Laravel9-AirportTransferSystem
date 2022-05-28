@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\LocationController;
 use App\Http\Controllers\AdminPanel\MessageController;
+use App\Http\Controllers\AdminPanel\RezervationController;
 use App\Http\Controllers\HomeController;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,9 @@ Route::view('/user-register', 'home.register')->name('registeruser');
 Route::get( uri: '/user-logout',action: [HomeController::class,'logout'])->name('logoutuser');
 Route::view('/admin-login', 'admin.login')->name('adminlogin');
 Route::post( uri: '/admin-login-check',action: [HomeController::class,'adminlogincheck'])->name('adminlogincheck');
+Route::get( uri: '/booking',action: [HomeController::class,'booking'])->name('booking');
+Route::post( uri: '/booking2',action: [HomeController::class,'booking2'])->name('booking2');
+Route::post( uri: '/storerezervation',action: [HomeController::class,'storerezervation'])->name('storerezervation');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -138,7 +142,6 @@ Route::get( uri: '/product/{id}',action: [HomeController::class,'product'])->nam
             Route::get('/delete/{id}', 'destroy')->name('destroy');
             Route::get('/show/{id}', 'show')->name('show');
         });
-
     });
 
 

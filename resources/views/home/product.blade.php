@@ -16,7 +16,10 @@
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
                     <h1 class="text-white mb-3 d-none d-sm-block">{{$data->title}}</h1>
-                    <a href="" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</a>
+                    <form class="py-5" method="get" action="{{route('booking')}}">
+                        @csrf
+                    <button value="{{$data->id}}" name="product_id" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -73,7 +76,7 @@
                                 <input type="hidden" name="product_id" value="{{$data->id}}" />
                                 <div class="form-group">
                                     <label for="subject">Subject *</label>
-                                    <input type="subject" id="subject" name="subject" maxlength="100" class="form-control" >
+                                    <input type="subject" id="subject" name="subject" required="required" maxlength="100" class="form-control" >
                                 </div>
                                 <div class="form-group">
                                     <label for="review">Review *</label>
@@ -95,7 +98,7 @@
                                     </div>
                                 @else
                                     <div class="form-group mb-0">
-                                        <a href="/login" class="btn btn-primary px-3">For Submit Your Review, Please Login</a>
+                                        <a href="{{asset('user-login')}}" class="btn btn-primary px-3">For Submit Your Review, Please Login</a>
                                     </div>
                                 @endauth
                             </form>

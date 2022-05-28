@@ -69,7 +69,7 @@
                 <a href="{{route('references')}}" class="nav-item nav-link">References</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="price.html" class="nav-item nav-link">Price</a>
-                <a href="{{asset('assets')}}/booking.html" class="nav-item nav-link">Booking</a>
+                <a href="{{route('booking')}}" class="nav-item nav-link">Booking</a>
                 <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>

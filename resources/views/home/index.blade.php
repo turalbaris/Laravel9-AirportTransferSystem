@@ -43,9 +43,15 @@
                                 <option value="3">Service 1</option>
                             </select>
                         </div>
-                        <div>
-                            <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
-                        </div>
+                        @auth
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
+                            </div>
+                        @else
+                            <div>
+                                <a class="btn btn-dark btn-block border-0 py-3" href="{{asset('user-login')}}">For Book Your Trip, Please Login</a>
+                            </div>
+                        @endauth
                     </form>
                 </div>
             </div>
@@ -106,7 +112,6 @@
             <h1 class="display-4 m-0">Newest<span class="text-primary"> Fleet</span></h1>
         </div>
             <div class="owl-carousel testimonial-carousel">
-
             @foreach($productlist1 as $rs)
             <div class="col-lg-12 mb-12">
                 <div class="card border-0">
@@ -133,7 +138,6 @@
                 </div>
             </div>
             @endforeach
-
         </div>
     </div>
 </div>
