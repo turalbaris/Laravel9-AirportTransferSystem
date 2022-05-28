@@ -17,7 +17,6 @@
                         <h3 class="d-flex flex-column align-items-center">BOOKING</h3>
                         <form class="py-5" method="post" action="{{route('booking2')}}">
                             @csrf
-
                             <div class="form-group">
                                 <label>Pickup Location</label>
                                 <select class="form-control select2" name="from_location_id">
@@ -26,7 +25,6 @@
                                     @endforeach
                                 </select>
                             </div>
-
                             <div class="form-group">
                                 <label>Drop off Location</label>
                                 <select class="form-control select2" name="to_location_id">
@@ -39,7 +37,7 @@
                                 <label>Select Vehicle</label>
                                 <select class="custom-select border-0 px-4" name="transferInfo" style="height: 47px;">
                                     @if($findProductId)
-                                    <option selected value="{{$findProductId->id}}">{{$findProductId->title}}</option>
+                                        <option selected value="{{$findProductId->id}}">{{$findProductId->title}}</option>
                                     @endif
                                     @foreach($vehicle as $vhc)
                                         <option value="{{$vhc->id}}">{{$vhc->title}}</option>
@@ -49,7 +47,6 @@
                             @auth
                                 <div>
                                     <button class="btn btn-dark btn-block border-0 py-3" type="submit">Search</button>
-
                                 </div>
                             @else
                                 <div>
@@ -63,7 +60,4 @@
         </div>
     </div>
     <!-- Booking End-->
-
-
-
 @endsection

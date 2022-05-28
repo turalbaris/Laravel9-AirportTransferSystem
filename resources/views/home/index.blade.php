@@ -21,31 +21,35 @@
         <div class="row align-items-center">
             <div class="col-lg-5">
                 <div class="bg-primary py-5 px-4 px-sm-5">
-                    <form class="py-5">
+                    <form class="py-5" method="post" action="{{route('booking2')}}">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                            <label>Pickup Location</label>
+                            <select class="form-control select2" name="from_location_id">
+                                @foreach($locationdata as $rs)
+                                    <option value="{{$rs->id}}">{{$rs->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
-                            <div class="date" id="date" data-target-input="nearest">
-                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker" />
-                            </div>
+                            <label>Drop off Location</label>
+                            <select class="form-control select2" name="to_location_id">
+                                @foreach($locationdata as $rs)
+                                    <option value="{{$rs->id}}">{{$rs->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
-                            <div class="time" id="time" data-target-input="nearest">
-                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <select class="custom-select border-0 px-4" style="height: 47px;">
-                                <option selected>Select A Service</option>
-                                <option value="1">Service 1</option>
-                                <option value="2">Service 1</option>
-                                <option value="3">Service 1</option>
+                            <label>Select Vehicle</label>
+                            <select class="custom-select border-0 px-4" name="transferInfo" style="height: 47px;">
+                                @foreach($vehicle as $vhc)
+                                    <option value="{{$vhc->id}}">{{$vhc->title}}</option>
+                                @endforeach
                             </select>
                         </div>
                         @auth
                             <div>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Search</button>
                             </div>
                         @else
                             <div>

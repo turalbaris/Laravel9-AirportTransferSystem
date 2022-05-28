@@ -41,44 +41,36 @@
                                     <input readonly="readonly" name="from_location_id" value="{{$findFromLocation->name}}" required="required" class="form-control border-0 p-4 datetimepicker-input" />
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div id="text">
                                     <label>Drop off Location</label>
                                     <input readonly="readonly" name="to_location_id" value="{{$findToLocation->name}}" required="required" class="form-control border-0 p-4 datetimepicker-input" />
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div id="text">
                                     <label>Vehicle</label>
                                     <input readonly="readonly" value="{{$findTransfer->title}}" required="required" class="form-control border-0 p-4 datetimepicker-input" />
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div id="text">
                                     <label>Airline</label>
                                     <input type="text" name="Airline" placeholder="Airline" required="required" class="form-control border-0 p-4 datetimepicker-input" />
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div id="text">
                                     <label>Flight Number</label>
                                     <input type="text" name="flightnumber" placeholder="Flight Number" required="required" class="form-control border-0 p-4 datetimepicker-input" />
                                 </div>
                             </div>
-
-
                             <div class="form-group">
                                 <div>
                                     <label>Flight Date</label>
                                     <input type="date" name="flightdate" min="2022-05-30" max="2030-01-30" required="required" class="form-control border-0 p-4 datetimepicker-input" />
                                 </div>
                             </div>
-
-
                             <div class="form-group">
                                 <div>
                                     <label>Flight Time</label>
@@ -92,13 +84,16 @@
                                     <input name="pickuptime" type="time" value="00:00" step="900" id="appt-time" required="required" class="form-control border-0 p-4 datetimepicker-input">
                                 </div>
                             </div>
-
-
-
                             @auth
-                                <div>
-                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
-                                </div>
+                                @if($distance == 0)
+                                    <div>
+                                        <a class="btn btn-dark btn-block border-0 py-3" href="{{asset('')}}">You cannot choose from {{$findFromLocation->name}} to {{$findFromLocation->name}}. Please choose again.</a>
+                                    </div>
+                                @else
+                                    <div>
+                                        <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
+                                    </div>
+                                @endif
                             @else
                                 <div>
                                     <a class="btn btn-dark btn-block border-0 py-3" href="{{asset('user-login')}}">For Book Your Trip, Please Login</a>
@@ -111,7 +106,4 @@
         </div>
     </div>
     <!-- Booking End-->
-
-
-
 @endsection

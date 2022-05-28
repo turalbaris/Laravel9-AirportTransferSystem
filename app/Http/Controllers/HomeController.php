@@ -20,11 +20,15 @@ class HomeController extends Controller
         $sliderdata=Product::limit(3)->get();
         $productlist1=Product::limit(20)->get();
         $setting= Setting::first();
+        $locationdata= Location::all();
+        $vehicle = Product::all();
 
         return view('home.index',[
             'setting'=>$setting,
             'sliderdata'=>$sliderdata,
-            'productlist1'=>$productlist1
+            'productlist1'=>$productlist1,
+            'locationdata'=>$locationdata,
+            'vehicle'=>$vehicle
         ]);
     }
 
