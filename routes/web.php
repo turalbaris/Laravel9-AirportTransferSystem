@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminPanel\LocationController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\AdminPanel\RezervationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get( uri: '/product/{id}',action: [HomeController::class,'product'])->name('product');
+
+
+Route::middleware('auth')->prefix('myaccount')->name('myaccount.')->group(function () {
+    Route::get( uri: '/',action: [UserController::class,'index'])->name('myprofile');
+});
+
+
 
 
 //*********************************** ADMIN PANEL   ROUTES *************************************//

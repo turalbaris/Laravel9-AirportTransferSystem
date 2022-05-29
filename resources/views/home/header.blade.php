@@ -5,9 +5,9 @@
             <div class="d-inline-flex align-items-center">
                 <a class="text-white pr-3" href="{{route('faq')}}">FAQs</a>
                 <span class="text-white">|</span>
-                <a class="text-white px-3" href="">Help</a>
+                <a class="text-white px-3" href="{{route('about')}}">About Us</a>
                 <span class="text-white">|</span>
-                <a class="text-white pl-3" href="">Support</a>
+                <a class="text-white pl-3" href="{{route('contact')}}">Contact</a>
             </div>
         </div>
         <div class="col-lg-6 text-center text-lg-right">
@@ -67,17 +67,8 @@
                 <a href="/" class="nav-item nav-link active">Home</a>
                 <a href="{{route('about')}}" class="nav-item nav-link">About</a>
                 <a href="{{route('references')}}" class="nav-item nav-link">References</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="price.html" class="nav-item nav-link">Price</a>
                 <a href="{{route('booking')}}" class="nav-item nav-link">Booking</a>
                 <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="single.html" class="dropdown-item">Blog Detail</a>
-                    </div>
-                </div>
             </div>
         </div>
         @auth
@@ -85,7 +76,7 @@
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}}</a>
             <div class="dropdown-menu ">
-                <a href="" class="dropdown-item">Profile</a>
+                <a href="{{route('myaccount.myprofile')}}" class="dropdown-item">Profile</a>
                 <a href="/user-logout" class="dropdown-item">Log out</a>
             </div>
         </div>

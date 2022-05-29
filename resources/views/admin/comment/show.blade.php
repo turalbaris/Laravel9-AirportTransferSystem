@@ -1,6 +1,6 @@
 @extends('layouts.adminwindow')
 
-@section('title', 'Show Message:'.$data->title)
+@section('title', $data->product->title.' Review')
 
 @section('content')
     <div id="page-inner">

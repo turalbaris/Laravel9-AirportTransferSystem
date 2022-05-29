@@ -87,9 +87,9 @@
                                 </div>
                             </div>
                             @auth
-                                @if($distance == 0)
+                                @if($distance == 0 or ($findFromLocation->type == 'City' and $findToLocation->type == 'City'))
                                     <div>
-                                        <a class="btn btn-dark btn-block border-0 py-3" href="{{asset('')}}">You cannot choose from {{$findFromLocation->name}} to {{$findFromLocation->name}}. Please choose again.</a>
+                                        <a class="btn btn-dark btn-block border-0 py-3" href="{{asset('booking')}}">You cannot choose from {{$findFromLocation->name}} to {{$findToLocation->name}}. Please choose again.</a>
                                     </div>
                                 @else
                                     <div>

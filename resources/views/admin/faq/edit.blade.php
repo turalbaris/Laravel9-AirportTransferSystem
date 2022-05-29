@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'Edit Product: '.$data->title)
+@section('title', 'Edit Faq')
 @section('icon', Storage::url($setting->icon))
 
 @section('head')

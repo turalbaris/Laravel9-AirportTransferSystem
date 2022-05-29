@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title', 'Edit Location: '.$data->title)
+@section('title', $data->name.' - Edit')
 @section('icon', Storage::url($setting->icon))
 
 @section('head')

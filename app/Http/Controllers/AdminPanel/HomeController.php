@@ -18,10 +18,15 @@ class HomeController extends Controller
         //https://laravel.com/docs/9.x/queries#aggregates
         $setting= Setting::first();
         $newcount = DB::table('messages')->where('status', '=', 'New')->get()->count();
-
+        $newrezervationcount = DB::table('rezervations')->where('status', '=', 'New')->get()->count();
+        $acceptedrezervationcount = DB::table('rezervations')->where('status', '=', 'Accepted')->get()->count();
+        $newcommentcount = DB::table('comments')->where('status', '=', 'New')->get()->count();
         return view ("admin.index",[
             'setting'=>$setting,
-            'newcount' => $newcount
+            'newcount' => $newcount,
+            'newrezervationcount'=>$newrezervationcount,
+            'acceptedrezervationcount'=>$acceptedrezervationcount,
+            'newcommentcount'=>$newcommentcount
         ]);
     }
 
