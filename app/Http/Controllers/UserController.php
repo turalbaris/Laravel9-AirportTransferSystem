@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Message;
 use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -119,7 +120,39 @@ class UserController extends Controller
     {
         $data= Comment::find($id);
         $data->delete();
-        return redirect()->back()->with('succes','Review Deleted');
+        return redirect()->back()->with('success','Review Deleted');
+    }
+
+    /**
+     * Display the user messages.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function mymessages()
+    {
+        $setting= Setting::first();
+        $data = DB::table('messages')->where('email', '=', Auth::user()->email)->get();
+        //$userinfo= User::find(Auth::user()->id);
+        return view('home.user-messages',[
+            'setting'=>$setting,
+            'data'=>$data
+            //'userinfo'=>$userinfo
+        ]);
+    }
+
+    /**
+     * Remove the user message from storage.
+     *
+     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     *
+     */
+    public function destroymymessage($id)
+    {
+        $data= Message::find($id);
+        $data->delete();
+        return redirect()->back()->with('success','Message Deleted');
     }
 
 }

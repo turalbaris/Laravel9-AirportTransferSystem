@@ -1,6 +1,6 @@
 @extends('layouts.frontbase')
 
-@section('title', 'User Reviews')
+@section('title', 'User Messages')
 @section('description', $setting->description)
 @section('keywords', $setting->keywords)
 @section('icon', Storage::url($setting->icon))
@@ -17,19 +17,20 @@
                                 <div class="d-flex flex-column text-center">
                                     @include('home.messages')
                                 </div>
-                                <div class="d-flex flex-column text-center mb-5 pt-3">My Reviews</div>
+                                <div class="d-flex flex-column text-center mb-5 pt-3">
+                                    Messages sent via the contact form with your registered e-mail address will appear below.
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover" >
                                         <thead>
                                         <tr>
-                                            <th>Id</th>
                                             <th>Name & Surname</th>
-                                            <th>Vehicle Name***</th>
+                                            <th>phone</th>
                                             <th>Subject</th>
-                                            <th>Review</th>
-                                            <th>Rate</th>
+                                            <th>Message</th>
+                                            <th>Admin Note</th>
                                             <th>Status</th>
                                             <th>Date</th>
                                             <th>Delete</th>
@@ -38,32 +39,20 @@
                                         <tbody>
                                         @foreach( $data as $rs)
                                             <tr>
-                                                <td>{{$rs->id}}</td>
-                                                <td>{{$userinfo->name}}</td>
-                                                <td>
-                                                    @php
-                                                        $productdata = DB::table('products')->where('id', '=', $rs->product_id)->get();
-                                                    @endphp
-                                                    @foreach( $productdata as $pid)
-                                                        @if($pid->id == $rs->product_id)
-                                                            <a href="{{route('product',['id'=>$pid->id])}}">{{$pid->title}}</a>
-                                                        @endif
-                                                    @endforeach
-                                                </td>
+                                                <td>{{$rs->name}}</td>
+                                                <td>{{$rs->phone}}</td>
                                                 <td>{{$rs->subject}}</td>
-                                                <td>{{$rs->review}}</td>
-                                                <td>{{$rs->rate}}</td>
+                                                <td>{{$rs->message}}</td>
+                                                <td>{{$rs->note}}</td>
                                                 <td>
                                                     @if($rs->status == 'New')
-                                                        Under Review
-                                                    @elseif($rs->status == 'True')
-                                                        Approved
+                                                        Not seen
                                                     @else
-                                                        Disapproved
+                                                        Seen
                                                     @endif
                                                 </td>
                                                 <td>{{$rs->created_at}}</td>
-                                                <td><a href="{{route('myaccount.user_review_delete',['id'=>$rs->id])}}" class="btn btn-danger"
+                                                <td><a href="{{route('myaccount.user_message_delete',['id'=>$rs->id])}}" class="btn btn-danger"
                                                        onclick="return confirm('Deleting !! Are you sure ?')">Delete</a>
                                                 </td>
                                             </tr>

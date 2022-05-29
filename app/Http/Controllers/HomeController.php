@@ -133,7 +133,7 @@ class HomeController extends Controller
         $data->ip = request()->ip();
         $data->save();
 
-        return redirect()->route('contact')->with('info','Your review has been sent, Thank you.');
+        return redirect()->route('contact')->with('info','Your message has been sent, Thank you.');
     }
 
 

@@ -59,6 +59,8 @@ Route::middleware('auth')->prefix('myaccount')->name('myaccount.')->group(functi
     Route::get( uri: '/',action: [UserController::class,'index'])->name('myprofile');
     Route::get( uri: '/myreviews',action: [UserController::class,'myreviews'])->name('myreviews');
     Route::get( uri: '/destroymyreview/{id}',action: [UserController::class,'destroymyreview'])->name('user_review_delete');
+    Route::get( uri: '/mymessages',action: [UserController::class,'mymessages'])->name('mymessages');
+    Route::get( uri: '/destroymymessage/{id}',action: [UserController::class,'destroymymessage'])->name('user_message_delete');
 });
 
 
