@@ -35,8 +35,8 @@
                                             <th>Id</th>
                                             <th>Pickup Location</th>
                                             <th>Drop off Location</th>
-                                            <th>pickuptime</th>
-                                            <th>price</th>
+                                            <th>Pickup Time</th>
+                                            <th>Price</th>
                                             <th>Status</th>
                                             <th>Show</th>
                                             <th>Delete</th>

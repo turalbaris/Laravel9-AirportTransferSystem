@@ -61,6 +61,8 @@ Route::middleware('auth')->prefix('myaccount')->name('myaccount.')->group(functi
     Route::get( uri: '/destroymyreview/{id}',action: [UserController::class,'destroymyreview'])->name('user_review_delete');
     Route::get( uri: '/mymessages',action: [UserController::class,'mymessages'])->name('mymessages');
     Route::get( uri: '/destroymymessage/{id}',action: [UserController::class,'destroymymessage'])->name('user_message_delete');
+    Route::get( uri: '/myrezervations',action: [UserController::class,'myrezervations'])->name('myrezervations');
+    Route::get( uri: '/destroyrezervation/{id}',action: [UserController::class,'destroymyrezervation'])->name('user_rezervation_delete');
 });
 
 

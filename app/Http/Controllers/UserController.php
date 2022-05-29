@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use App\Models\Message;
+use App\Models\Rezervation;
 use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -153,6 +154,38 @@ class UserController extends Controller
         $data= Message::find($id);
         $data->delete();
         return redirect()->back()->with('success','Message Deleted');
+    }
+
+    /**
+     * Display the user messages.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myrezervations()
+    {
+        $setting= Setting::first();
+        $data = DB::table('rezervations')->where('user_id', '=', Auth::user()->id)->get();
+        //$userinfo= User::find(Auth::user()->id);
+        return view('home.user-rezervations',[
+            'setting'=>$setting,
+            'data'=>$data
+            //'userinfo'=>$userinfo
+        ]);
+    }
+
+    /**
+     * Remove the user message from storage.
+     *
+     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     *
+     */
+    public function destroymyrezervation($id)
+    {
+        $data= Rezervation::find($id);
+        $data->delete();
+        return redirect()->back()->with('success','Rezervation Deleted');
     }
 
 }

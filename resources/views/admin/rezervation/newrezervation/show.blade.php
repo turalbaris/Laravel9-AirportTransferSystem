@@ -94,6 +94,7 @@
                                             <select class="form-control" name="status">
                                                 <option selected>{{$data->status}}</option>
                                                 <option>Accepted</option>
+                                                <option>Declined</option>
                                             </select>
                                             <div class="d-flex flex-column text-center mb-5 pt-3">
                                                 <button type="submit" class="btn btn-primary">Update Data</button>

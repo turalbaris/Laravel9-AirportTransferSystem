@@ -79,6 +79,7 @@
                 <a href="{{route('myaccount.myprofile')}}" class="dropdown-item">My Profile</a>
                 <a href="{{route('myaccount.myreviews')}}" class="dropdown-item">My Reviews</a>
                 <a href="{{route('myaccount.mymessages')}}" class="dropdown-item">My Messages</a>
+                <a href="{{route('myaccount.myrezervations')}}" class="dropdown-item">My Rezervations</a>
                 <a href="/user-logout" class="dropdown-item">Log out</a>
             </div>
         </div>
