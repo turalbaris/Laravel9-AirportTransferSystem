@@ -57,6 +57,8 @@ Route::get( uri: '/product/{id}',action: [HomeController::class,'product'])->nam
 
 Route::middleware('auth')->prefix('myaccount')->name('myaccount.')->group(function () {
     Route::get( uri: '/',action: [UserController::class,'index'])->name('myprofile');
+    Route::get( uri: '/myreviews',action: [UserController::class,'myreviews'])->name('myreviews');
+    Route::get( uri: '/destroymyreview/{id}',action: [UserController::class,'destroymyreview'])->name('user_review_delete');
 });
 
 
@@ -163,7 +165,7 @@ Route::middleware('auth')->prefix('myaccount')->name('myaccount.')->group(functi
             //***********************************  ADMIN ACCEPTED REZERVATION   ROUTES *************************************//
             Route::prefix('/acceptedrezervation')->name('acceptedrezervation.')->controller(RezervationController::class)->group(function () {
                 Route::get('/', 'acceptedindex')->name('index');
-                Route::get('/show/{id}/{uid}/{pid}', 'showcompleted')->name('show');
+                Route::get('/show/{id}/{uid}/{pid}', 'acceptedshow')->name('show');
                 Route::post('/update/{id}', 'acceptedupdate')->name('update');
                 Route::get('/delete/{id}', 'accepteddestroy')->name('destroy');
             });

@@ -99,7 +99,7 @@ class RezervationController extends Controller
         ]);
     }
 
-    public function showcompleted($id, $uid, $pid)
+    public function acceptedshow($id, $uid, $pid)
     {
         //$uid calls user_id and takes user information.
         //$pid calls product_id and takes product(vehicle) information.

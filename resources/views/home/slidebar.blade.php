@@ -26,7 +26,7 @@
                                 <button name="product_id" value="{{$rs->id}}" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
                             </form>
 
-                            <button href="{{route('product',['id'=>$rs->id])}}" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</button>
+                            <a href="{{route('product',['id'=>$rs->id])}}" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
                         </div>
                     </div>
                 </div>

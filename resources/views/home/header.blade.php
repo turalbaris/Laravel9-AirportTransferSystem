@@ -56,7 +56,7 @@
 <!-- Navbar Start -->
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
-        <a href="" class="navbar-brand d-block d-lg-none">
+        <a href="/" class="navbar-brand d-block d-lg-none">
             <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">Safety</span>First</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -76,7 +76,8 @@
         <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{Auth::user()->name}}</a>
             <div class="dropdown-menu ">
-                <a href="{{route('myaccount.myprofile')}}" class="dropdown-item">Profile</a>
+                <a href="{{route('myaccount.myprofile')}}" class="dropdown-item">My Profile</a>
+                <a href="{{route('myaccount.myreviews')}}" class="dropdown-item">My Reviews</a>
                 <a href="/user-logout" class="dropdown-item">Log out</a>
             </div>
         </div>

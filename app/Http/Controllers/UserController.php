@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -85,4 +89,37 @@ class UserController extends Controller
     {
         //
     }
+
+    /**
+     * Display the user reviews.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myreviews()
+    {
+        $setting= Setting::first();
+        $data = DB::table('comments')->where('user_id', '=', Auth::user()->id)->get();
+        $userinfo= User::find(Auth::user()->id);
+        return view('home.user-reviews',[
+            'setting'=>$setting,
+            'data'=>$data,
+            'userinfo'=>$userinfo
+        ]);
+    }
+
+    /**
+     * Remove the user review from storage.
+     *
+     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     *
+     */
+    public function destroymyreview($id)
+    {
+        $data= Comment::find($id);
+        $data->delete();
+        return redirect()->back()->with('succes','Review Deleted');
+    }
+
 }

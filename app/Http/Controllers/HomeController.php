@@ -17,7 +17,7 @@ class HomeController extends Controller
 {
 
     public function index(){
-        $sliderdata=Product::limit(3)->get();
+        $sliderdata=Product::limit(10)->get();
         $productlist1=Product::limit(20)->get();
         $setting= Setting::first();
         $locationdata= Location::all();
