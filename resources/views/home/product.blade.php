@@ -18,7 +18,7 @@
                     <h1 class="text-white mb-3 d-none d-sm-block">{{$data->title}}</h1>
                     <form class="py-5" method="get" action="{{route('booking')}}">
                         @csrf
-                    <button value="{{$data->id}}" name="product_id" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
+                        <button value="{{$data->id}}" name="product_id" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
                     </form>
                 </div>
             </div>
@@ -71,6 +71,15 @@
                     <div class="col-lg-8">
                         <div style="padding: 30px; background: #f6f6f6;">
                             <h3 class="mb-4">Leave a comment</h3>
+                            {{--Returns the number of reviews for auth user that sent for the product--}}
+                            @auth()
+                                @php
+                                    $authreviewscount = DB::table('comments')
+                                ->where('product_id', '=', $pid)
+                                ->where('user_id', '=', Auth::user()->id)
+                                ->get()->count();
+                                @endphp
+                            @endauth
                             <form action="{{route('storecomment')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{$data->id}}" />
@@ -93,9 +102,15 @@
                                     </select>
                                 </div>
                                 @auth
-                                    <div class="form-group mb-0">
-                                        <input type="submit" value="Leave Comment" class="btn btn-primary px-3">
-                                    </div>
+                                    @if($authreviewscount < 3)
+                                        <div class="form-group mb-0">
+                                            <input type="submit" value="Leave Comment" class="btn btn-primary px-3">
+                                        </div>
+                                    @else
+                                        <div class="form-group mb-0">
+                                            <a href="{{route('myaccount.myreviews')}}" class="btn btn-primary px-3">You can not submit a review more than 3 times. Please delete at least one review to send another one.</a>
+                                        </div>
+                                    @endif
                                 @else
                                     <div class="form-group mb-0">
                                         <a href="{{asset('user-login')}}" class="btn btn-primary px-3">For Submit Your Review, Please Login</a>
@@ -108,21 +123,21 @@
                 </div>
             </div>
         </div>
-    <!-- Comment End -->
+        <!-- Comment End -->
 
         <!-- Review Start -->
         <div class="col-lg-8 py-3">
             <h3 class="col-lg-8 py-3">@if ($reviewscount == 0) No Comment @elseif($reviewscount == 1)1 Comment @else{{$reviewscount}} Comments @endif -
                 {{number_format($reviewsavg,1)}}<hr></h3>
             @foreach($reviews as $rs)
-            <div class="media mb-4">
-                <img src="{{asset('assets')}}/img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
-                <div class="media-body">
-                    <h6>{{$rs->user->name}} <small><i>{{$rs->created_at}}</i></small><i> - 5/{{$rs->rate}}</i></h6>
-                    <strong>{{$rs->subject}}</strong>
-                    <p>{{$rs->review}} ve </p>
+                <div class="media mb-4">
+                    <img src="{{asset('assets')}}/img/user.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+                    <div class="media-body">
+                        <h6>{{$rs->user->name}} <small><i>{{$rs->created_at}}</i></small><i> - 5/{{$rs->rate}}</i></h6>
+                        <strong>{{$rs->subject}}</strong>
+                        <p>{{$rs->review}} ve </p>
+                    </div>
                 </div>
-            </div>
             @endforeach
         </div>
         <!-- Review End -->

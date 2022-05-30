@@ -179,11 +179,13 @@ class HomeController extends Controller
         $data=Product::find($id);
         $images = DB::table('images')->where('product_id',$id)->get();
         $reviews = Comment::where('product_id',$id)->where('status','True')->get();
+        $pid = $id;
         return view('home.product',[
             'setting'=>$setting,
             'data'=>$data,
             'images'=>$images,
             'reviews'=>$reviews,
+            'pid'=>$pid,
             'reviewscount'=>$reviewscount,
             'reviewsavg'=>$reviewsavg
         ]);

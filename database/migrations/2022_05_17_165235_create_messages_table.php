@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email',50)->nullable();
             $table->string('phone',20)->nullable();
             $table->string('subject',100)->nullable();
-            $table->string('message')->nullable();
+            $table->string('message',500)->nullable();
             $table->string('note',500)->nullable();
             $table->string('ip',50)->nullable();
             $table->string('status',15)->nullable()->default('New');

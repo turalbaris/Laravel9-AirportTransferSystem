@@ -18,22 +18,27 @@
             <div class="col-12 col-sm-8 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
+                    @auth()
+                        @php
+                            $authauto = DB::table('users')->where('id', '=', Auth::user()->id)->get();
+                        @endphp
+                    @endauth
                     <form id="form-group" action="{{route("storemessage")}}" class="clearfix" method="post">
                         @csrf
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" name="name" placeholder="Your Name & Surname" required="required" data-validation-required-message="Please enter your name and surname" maxlength="50" />
+                            <input type="text" @auth() @foreach($authauto as $rs) value="{{$rs->name}}" readonly="readonly" @endforeach @endauth class="form-control p-4" name="name" placeholder="Your Name & Surname" required="required" data-validation-required-message="Please enter your name and surname" maxlength="50" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control p-4" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" maxlength="50" />
+                            <input type="email" @auth() @foreach($authauto as $rs) value="{{$rs->email}}" readonly="readonly" @endforeach @endauth class="form-control p-4" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" maxlength="50" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="text" class="form-control p-4" name="phone" placeholder="Phone" required="required" data-validation-required-message="Please enter your phone number" maxlength="20"/>
+                            <input type="text" @auth() @foreach($authauto as $rs) value="{{$rs->phone}}" readonly="readonly" @endforeach @endauth class="form-control p-4" name="phone" placeholder="Phone" required="required" data-validation-required-message="Please enter your phone number" maxlength="20"/>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="email" class="form-control p-4" name="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter the subject" maxlength="100" />
+                            <input type="text" class="form-control p-4" name="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter the subject" maxlength="100" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">

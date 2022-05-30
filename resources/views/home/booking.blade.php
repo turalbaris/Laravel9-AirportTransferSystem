@@ -21,7 +21,9 @@
                                 <label>Pickup Location</label>
                                 <select class="form-control select2" name="from_location_id">
                                     @foreach($data as $rs)
-                                        <option value="{{$rs->id}}">{{$rs->name}}</option>
+                                        @if($rs->status == 'Active')
+                                            <option value="{{$rs->id}}">{{$rs->name}}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                             </div>
@@ -29,7 +31,9 @@
                                 <label>Drop off Location</label>
                                 <select class="form-control select2" name="to_location_id">
                                     @foreach($data as $rs)
-                                        <option value="{{$rs->id}}">{{$rs->name}}</option>
+                                        @if($rs->status == 'Active')
+                                            <option value="{{$rs->id}}">{{$rs->name}}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                             </div>
@@ -40,7 +44,9 @@
                                         <option selected value="{{$findProductId->id}}">{{$findProductId->title}}</option>
                                     @endif
                                     @foreach($vehicle as $vhc)
-                                        <option value="{{$vhc->id}}">{{$vhc->title}}</option>
+                                        @if($vhc->status == 'Available')
+                                            <option value="{{$vhc->id}}">{{$vhc->title}}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                             </div>
