@@ -80,7 +80,7 @@ class HomeController extends Controller
         $distance = (sqrt(pow($findFromLocation->lat-$findToLocation->lat,2)+
             pow($findFromLocation->long-$findToLocation->long,2))*100);
         $price = (($findTransfer->base_price)+($findTransfer->km_price)*$distance);
-
+        $pricewithtax = ($price*($findTransfer->tax)/100)+$price;
         return view('home.booking2',[
             'findToLocation'=>$findToLocation,
             'findFromLocation'=>$findFromLocation,
@@ -88,6 +88,7 @@ class HomeController extends Controller
             'setting'=>$setting,
             'data'=>$data,
             'distance'=>$distance,
+            'pricewithtax'=>$pricewithtax,
             'price'=>$price
         ]);
     }

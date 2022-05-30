@@ -14,22 +14,24 @@
                 </div>
             </div>
             @foreach($sliderdata as $rs)
-                <div class="carousel-item">
-                    <img class="w-100" src="{{Storage::url($rs->image)}}" alt="Image" style="max-width: 1920px; max-height: 1080px">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h3 class="text-white mb-3 d-none d-sm-block">Best Transfer Reservation Services</h3>
-                            <h2 class="display-3 text-white mb-3">{{$rs->title}}</h2>
-                            <h5 class="text-white mb-3 d-none d-sm-block">{{$rs->description}}</h5>
-                            <form method="get" action="{{route('booking')}}">
-                                @csrf
-                                <button name="product_id" value="{{$rs->id}}" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
-                            </form>
+                @if($rs->status=='Available')
+                    <div class="carousel-item">
+                        <img class="w-100" src="{{Storage::url($rs->image)}}" alt="Image" style="max-width: 1920px; max-height: 1080px">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 900px;">
+                                <h3 class="text-white mb-3 d-none d-sm-block">Best Transfer Reservation Services</h3>
+                                <h2 class="display-3 text-white mb-3">{{$rs->title}}</h2>
+                                <h5 class="text-white mb-3 d-none d-sm-block">{{$rs->description}}</h5>
+                                <form method="get" action="{{route('booking')}}">
+                                    @csrf
+                                    <button name="product_id" value="{{$rs->id}}" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
+                                </form>
 
-                            <a href="{{route('product',['id'=>$rs->id])}}" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
+                                <a href="{{route('product',['id'=>$rs->id])}}" class="btn btn-lg btn-secondary mt-3 mt-md-4 px-4">Learn More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             @endforeach
         </div>
         <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">

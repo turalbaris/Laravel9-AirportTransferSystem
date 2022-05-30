@@ -16,10 +16,12 @@
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style="max-width: 900px;">
                     <h1 class="text-white mb-3 d-none d-sm-block">{{$data->title}}</h1>
-                    <form class="py-5" method="get" action="{{route('booking')}}">
-                        @csrf
-                        <button value="{{$data->id}}" name="product_id" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
-                    </form>
+                    @if($data->status=='Available')
+                        <form class="py-5" method="get" action="{{route('booking')}}">
+                            @csrf
+                            <button value="{{$data->id}}" name="product_id" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Book Now</button>
+                        </form>
+                    @endif
                 </div>
             </div>
         </div>

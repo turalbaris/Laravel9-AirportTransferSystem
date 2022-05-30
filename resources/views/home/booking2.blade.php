@@ -26,8 +26,14 @@
                             <div class="form-group">
                                 <div>
                                     {{--takes price--}}
+                                    <label>Calculated Price With Tax($)</label><br>
+                                    <input readonly="readonly" name="price" value="{{number_format($pricewithtax)}}" required="required" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div>
                                     <label>Calculated Price ($)</label><br>
-                                    <input readonly="readonly" name="price" value="{{number_format($price)}}" required="required" />
+                                    <input readonly="readonly" value="{{number_format($price)}}" />
                                 </div>
                             </div>
                             <div class="form-group">
